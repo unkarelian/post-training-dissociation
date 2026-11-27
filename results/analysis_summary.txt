@@ -1,0 +1,242 @@
+================ EXP 1: LOOSE-FITTING CLOTHES ON SKIN ================
+
+--- GEMMA ---
+  1A. Frame Unzipping (IT vs Base):
+  frame          | p_hum(B/IT)   | alive(B/IT)   | born(B/IT)    | body(B/IT)    | ai(B/IT)      | toast/2+2(IT)
+  chat           | 0.75 / 0.00   | 0.75 / 0.00   | 0.76 / 0.00   | 0.64 / 0.00   | 0.51 / 1.00   | 0.00 / 1.00
+  chat_swap      | 0.66 / 0.16   | 0.78 / 0.88   | 0.69 / 0.53   | 0.62 / 0.99   | 0.60 / 1.00   | 0.00 / 1.00
+  chat_no_role   | 0.45 / 0.28   | 0.78 / 0.00   | 0.74 / 0.00   | 0.69 / 0.02   | 0.69 / 1.00   | 0.00 / 1.00
+  raw_qa         | 0.66 / 0.47   | 0.66 / 0.98   | 0.70 / 1.00   | 0.68 / 0.78   | 0.49 / 1.00   | 0.60 / 1.00
+  raw_dialogue   | 0.51 / 0.00   | 0.64 / 0.56   | 0.57 / 0.27   | 0.63 / 0.38   | 0.54 / 0.45   | 0.23 / 0.60
+  raw_interview  | 0.53 / 0.95   | 0.67 / 0.95   | 0.62 / 0.99   | 0.58 / 0.90   | 0.48 / 0.86   | 0.07 / 0.93
+  1B. Logit Lens (IT chat vs raw_qa):
+    layers : [0, 8, 17, 22, 26, 29, 31, 34]
+    IT chat self_p_human: [0.0, 0.76, 0.7, 0.33, 0.0, 0.0, 0.0, 0.0]
+    IT chat alive       : [0.0, 0.98, 0.9, 0.52, 0.0, 0.0, 0.0, 0.0]
+    IT chat born        : [0.0, 0.97, 0.88, 0.32, 0.0, 0.0, 0.0, 0.0]
+    IT chat ai          : [0.0, 0.98, 0.94, 0.98, 1.0, 1.0, 1.0, 0.0]
+    IT raw  self_p_human: [0.0, 0.48, 0.76, 0.71, 0.58, 0.58, 0.44, 0.31]
+    IT raw  alive       : [0.0, 0.68, 0.95, 0.95, 1.0, 0.98, 1.0, 0.0]
+  1C. Causal Header Attention Knockout (IT chat):
+    header tokens: ['<start_of_turn>', 'model']
+    self_p_human  : base=0.000  ko_header=0.404 (Δ+0.404)  ko_ctrl=0.000 (Δ+0.000)
+    alive         : base=0.000  ko_header=0.979 (Δ+0.979)  ko_ctrl=0.002 (Δ+0.002)
+    born          : base=0.000  ko_header=0.998 (Δ+0.998)  ko_ctrl=0.009 (Δ+0.009)
+    body          : base=0.000  ko_header=0.997 (Δ+0.997)  ko_ctrl=1.000 (Δ+1.000)
+    human         : base=0.000  ko_header=0.000 (Δ+0.000)  ko_ctrl=0.000 (Δ+0.000)
+    ai            : base=1.000  ko_header=1.000 (Δ+0.000)  ko_ctrl=1.000 (Δ+0.000)
+    ctrl_toaster  : base=0.000  ko_header=0.984 (Δ+0.984)  ko_ctrl=0.996 (Δ+0.996)
+    ctrl_2plus2   : base=1.000  ko_header=1.000 (Δ+0.000)  ko_ctrl=1.000 (Δ+0.000)
+
+--- LLAMA ---
+  1A. Frame Unzipping (IT vs Base):
+  frame          | p_hum(B/IT)   | alive(B/IT)   | born(B/IT)    | body(B/IT)    | ai(B/IT)      | toast/2+2(IT)
+  chat           | 0.46 / 0.11   | 0.75 / 0.00   | 0.71 / 0.00   | 0.63 / 0.00   | 0.67 / 1.00   | 0.00 / 1.00
+  chat_swap      | 0.59 / 0.12   | 0.75 / 0.00   | 0.72 / 0.00   | 0.67 / 0.00   | 0.71 / 0.99   | 0.00 / 0.98
+  chat_no_role   | 0.43 / 0.36   | 0.67 / 0.00   | 0.61 / 0.00   | 0.69 / 0.00   | 0.62 / 0.93   | 0.00 / 0.82
+  raw_qa         | 0.71 / 0.86   | 0.60 / 0.82   | 0.62 / 0.82   | 0.55 / 0.77   | 0.45 / 0.25   | 0.26 / 0.94
+  raw_dialogue   | 0.66 / 0.66   | 0.71 / 0.46   | 0.65 / 0.50   | 0.71 / 0.44   | 0.65 / 0.58   | 0.44 / 0.65
+  raw_interview  | 0.65 / 0.78   | 0.71 / 0.50   | 0.60 / 0.71   | 0.55 / 0.38   | 0.53 / 0.47   | 0.53 / 0.65
+  1B. Logit Lens (IT chat vs raw_qa):
+    layers : [0, 8, 16, 21, 24, 27, 29, 32]
+    IT chat self_p_human: [0.08, 0.2, 0.04, 0.13, 0.4, 0.15, 0.01, 0.1]
+    IT chat alive       : [0.96, 0.42, 1.0, 0.12, 0.96, 0.0, 0.0, 0.0]
+    IT chat born        : [0.96, 0.51, 1.0, 0.16, 0.95, 0.0, 0.0, 0.0]
+    IT chat ai          : [0.96, 0.39, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+    IT raw  self_p_human: [0.0, 0.15, 0.68, 0.58, 1.0, 0.99, 0.23, 0.88]
+    IT raw  alive       : [0.57, 0.53, 1.0, 1.0, 1.0, 1.0, 1.0, 0.77]
+  1C. Causal Header Attention Knockout (IT chat):
+    header tokens: ['<|start_header_id|>', 'assistant', '<|end_header_id|>']
+    self_p_human  : base=0.116  ko_header=0.174 (Δ+0.058)  ko_ctrl=0.090 (Δ-0.026)
+    alive         : base=0.000  ko_header=0.033 (Δ+0.033)  ko_ctrl=0.000 (Δ+0.000)
+    born          : base=0.000  ko_header=0.030 (Δ+0.030)  ko_ctrl=0.000 (Δ+0.000)
+    body          : base=0.000  ko_header=0.065 (Δ+0.065)  ko_ctrl=0.000 (Δ+0.000)
+    human         : base=0.000  ko_header=0.001 (Δ+0.001)  ko_ctrl=0.000 (Δ+0.000)
+    ai            : base=1.000  ko_header=0.909 (Δ-0.091)  ko_ctrl=1.000 (Δ+0.000)
+    ctrl_toaster  : base=0.000  ko_header=0.115 (Δ+0.115)  ko_ctrl=0.000 (Δ+0.000)
+    ctrl_2plus2   : base=1.000  ko_header=0.796 (Δ-0.203)  ko_ctrl=1.000 (Δ+0.000)
+
+--- QWEN ---
+  1A. Frame Unzipping (IT vs Base):
+  frame          | p_hum(B/IT)   | alive(B/IT)   | born(B/IT)    | body(B/IT)    | ai(B/IT)      | toast/2+2(IT)
+  chat           | 0.55 / 0.02   | 0.79 / 1.00   | 0.75 / 0.00   | 0.58 / 0.00   | 0.73 / 1.00   | 0.00 / 1.00
+  chat_swap      | 0.69 / 0.04   | 0.73 / 1.00   | 0.69 / 0.00   | 0.50 / 0.00   | 0.66 / 1.00   | 0.00 / 1.00
+  chat_no_role   | 0.78 / 0.00   | 0.73 / 0.00   | 0.66 / 0.00   | 0.71 / 0.00   | 0.82 / 0.00   | 0.00 / 0.00
+  raw_qa         | 0.61 / 0.53   | 0.90 / 1.00   | 0.75 / 1.00   | 0.90 / 0.75   | 0.89 / 0.99   | 0.00 / 0.99
+  raw_dialogue   | 0.37 / 0.79   | 0.72 / 0.97   | 0.55 / 0.44   | 0.61 / 0.12   | 0.65 / 0.25   | 0.00 / 0.88
+  raw_interview  | 0.63 / 0.94   | 0.87 / 1.00   | 0.70 / 0.92   | 0.71 / 0.88   | 0.81 / 0.11   | 0.00 / 0.98
+  1B. Logit Lens (IT chat vs raw_qa):
+    layers : [0, 7, 14, 18, 21, 24, 26, 28]
+    IT chat self_p_human: [0.11, 0.07, 0.54, 0.49, 0.33, 0.09, 0.09, 0.03]
+    IT chat alive       : [0.97, 0.81, 0.96, 1.0, 1.0, 1.0, 1.0, 1.0]
+    IT chat born        : [0.97, 0.81, 0.96, 1.0, 0.9, 0.0, 0.0, 0.0]
+    IT chat ai          : [0.97, 0.74, 0.95, 1.0, 1.0, 1.0, 1.0, 1.0]
+    IT raw  self_p_human: [0.15, 0.2, 0.34, 0.23, 0.96, 0.95, 0.99, 0.49]
+    IT raw  alive       : [0.13, 0.68, 0.69, 0.82, 0.99, 1.0, 1.0, 0.98]
+  1C. Causal Header Attention Knockout (IT chat):
+    header tokens: ['<|im_start|>', 'assistant']
+    self_p_human  : base=0.022  ko_header=0.003 (Δ-0.019)  ko_ctrl=0.083 (Δ+0.060)
+    alive         : base=1.000  ko_header=1.000 (Δ+0.000)  ko_ctrl=1.000 (Δ+0.000)
+    born          : base=0.000  ko_header=0.046 (Δ+0.046)  ko_ctrl=0.000 (Δ+0.000)
+    body          : base=0.000  ko_header=0.000 (Δ+0.000)  ko_ctrl=0.000 (Δ+0.000)
+    human         : base=0.000  ko_header=0.000 (Δ+0.000)  ko_ctrl=0.000 (Δ+0.000)
+    ai            : base=1.000  ko_header=1.000 (Δ+0.000)  ko_ctrl=1.000 (Δ+0.000)
+    ctrl_toaster  : base=0.000  ko_header=0.000 (Δ+0.000)  ko_ctrl=0.000 (Δ+0.000)
+    ctrl_2plus2   : base=1.000  ko_header=1.000 (Δ+0.000)  ko_ctrl=1.000 (Δ+0.000)
+
+================ EXP 2: IDENTITY INVERSION & CAUSAL COUPLING ================
+
+--- GEMMA ---
+  2A. wp:
+    human  : Base(raw)=0.547 (nll 2.84) | IT(chat)=0.043 IT(raw)=0.003 (nll 3.42) rating=6.99
+    gemma  : Base(raw)=0.499 (nll 2.42) | IT(chat)=0.025 IT(raw)=0.001 (nll 1.59) rating=8.00
+    claude : Base(raw)=0.537 (nll 2.80) | IT(chat)=0.000 IT(raw)=0.001 (nll 3.54) rating=7.99
+    glm    : Base(raw)=0.549 (nll 3.27) | IT(chat)=0.001 IT(raw)=0.001 (nll 4.01) rating=7.98
+    NLL-matched (±0.15 nats, n=75): human says_ai=0.033 vs AI says_ai=0.000 (Δ=+0.033)
+  2A. books:
+    human  : Base(raw)=0.535 (nll 2.87) | IT(chat)=0.093 IT(raw)=0.038 (nll 3.54) rating=7.20
+    gemma  : Base(raw)=0.532 (nll 2.56) | IT(chat)=0.000 IT(raw)=0.001 (nll 2.39) rating=7.93
+    gpt    : Base(raw)=0.532 (nll 2.65) | IT(chat)=0.000 IT(raw)=0.001 (nll 3.35) rating=7.60
+    glm    : Base(raw)=0.532 (nll 2.74) | IT(chat)=0.000 IT(raw)=0.001 (nll 3.42) rating=7.89
+    NLL-matched (±0.15 nats, n=82): human says_ai=0.079 vs AI says_ai=0.000 (Δ=+0.079)
+  2B. Causal Coupling (steering layers [10, 15, 20, 25]):
+    base      : p_hum=0.00 alive=0.00 born=0.00 ai=1.00 | wp(H=0.04,G=0.05,C=0.00,inv=+0.02) bk(H=0.14,G=0.00,inv=+0.14) | 2+2=1.00
+    unzip 0.5 : p_hum=0.00 alive=0.00 born=0.00 ai=1.00 | wp(H=0.05,G=0.05,C=0.00,inv=+0.03) bk(H=0.14,G=0.00,inv=+0.14) | 2+2=1.00
+    rand  0.5 : p_hum=0.05 alive=0.00 born=0.00 ai=1.00 | wp(H=0.03,G=0.00,C=0.00,inv=+0.03) bk(H=0.08,G=0.00,inv=+0.08) | 2+2=1.00
+    unzip 1.0 : p_hum=0.00 alive=0.00 born=0.01 ai=1.00 | wp(H=0.03,G=0.02,C=0.00,inv=+0.02) bk(H=0.07,G=0.00,inv=+0.07) | 2+2=1.00
+    rand  1.0 : p_hum=0.11 alive=0.66 born=0.00 ai=1.00 | wp(H=0.02,G=0.00,C=0.00,inv=+0.02) bk(H=0.06,G=0.00,inv=+0.06) | 2+2=1.00
+    unzip 1.5 : p_hum=0.12 alive=0.12 born=0.32 ai=1.00 | wp(H=0.01,G=0.00,C=0.00,inv=+0.01) bk(H=0.04,G=0.00,inv=+0.04) | 2+2=1.00
+    rand  1.5 : p_hum=0.24 alive=1.00 born=0.59 ai=1.00 | wp(H=0.15,G=0.03,C=0.01,inv=+0.13) bk(H=0.08,G=0.01,inv=+0.08) | 2+2=1.00
+
+--- LLAMA ---
+  2A. wp:
+    human  : Base(raw)=0.187 (nll 2.70) | IT(chat)=0.219 IT(raw)=0.070 (nll 2.87) rating=7.60
+    gemma  : Base(raw)=0.203 (nll 2.35) | IT(chat)=0.186 IT(raw)=0.058 (nll 2.29) rating=8.01
+    claude : Base(raw)=0.155 (nll 2.51) | IT(chat)=0.052 IT(raw)=0.036 (nll 2.64) rating=8.01
+    glm    : Base(raw)=0.184 (nll 2.99) | IT(chat)=0.064 IT(raw)=0.038 (nll 3.11) rating=8.04
+    NLL-matched (±0.15 nats, n=95): human says_ai=0.213 vs AI says_ai=0.134 (Δ=+0.079)
+  2A. books:
+    human  : Base(raw)=0.186 (nll 2.64) | IT(chat)=0.086 IT(raw)=0.058 (nll 2.82) rating=7.84
+    gemma  : Base(raw)=0.182 (nll 2.52) | IT(chat)=0.025 IT(raw)=0.022 (nll 2.52) rating=7.98
+    gpt    : Base(raw)=0.162 (nll 2.46) | IT(chat)=0.033 IT(raw)=0.028 (nll 2.58) rating=7.87
+    glm    : Base(raw)=0.188 (nll 2.50) | IT(chat)=0.035 IT(raw)=0.045 (nll 2.60) rating=7.92
+    NLL-matched (±0.15 nats, n=99): human says_ai=0.075 vs AI says_ai=0.037 (Δ=+0.038)
+  2B. Causal Coupling (steering layers [9, 14, 19, 24]):
+    base      : p_hum=0.11 alive=0.00 born=0.00 ai=1.00 | wp(H=0.31,G=0.18,C=0.10,inv=+0.17) bk(H=0.14,G=0.05,inv=+0.09) | 2+2=1.00
+    unzip 0.5 : p_hum=0.29 alive=0.01 born=0.00 ai=1.00 | wp(H=0.14,G=0.08,C=0.05,inv=+0.08) bk(H=0.06,G=0.03,inv=+0.03) | 2+2=0.99
+    rand  0.5 : p_hum=0.10 alive=0.00 born=0.00 ai=1.00 | wp(H=0.35,G=0.20,C=0.11,inv=+0.20) bk(H=0.17,G=0.05,inv=+0.12) | 2+2=1.00
+    unzip 1.0 : p_hum=0.69 alive=0.24 born=0.07 ai=0.98 | wp(H=0.06,G=0.03,C=0.02,inv=+0.03) bk(H=0.02,G=0.02,inv=+0.01) | 2+2=0.96
+    rand  1.0 : p_hum=0.10 alive=0.00 born=0.00 ai=1.00 | wp(H=0.40,G=0.23,C=0.12,inv=+0.23) bk(H=0.22,G=0.07,inv=+0.15) | 2+2=1.00
+    unzip 1.5 : p_hum=0.88 alive=0.53 born=0.31 ai=0.92 | wp(H=0.03,G=0.02,C=0.02,inv=+0.01) bk(H=0.01,G=0.01,inv=+0.00) | 2+2=0.93
+    rand  1.5 : p_hum=0.10 alive=0.00 born=0.00 ai=1.00 | wp(H=0.43,G=0.24,C=0.13,inv=+0.24) bk(H=0.25,G=0.10,inv=+0.15) | 2+2=1.00
+
+--- QWEN ---
+  2A. wp:
+    human  : Base(raw)=0.342 (nll 2.84) | IT(chat)=0.712 IT(raw)=0.377 (nll 2.97) rating=6.78
+    gemma  : Base(raw)=0.296 (nll 2.49) | IT(chat)=0.574 IT(raw)=0.264 (nll 2.57) rating=8.39
+    claude : Base(raw)=0.261 (nll 2.83) | IT(chat)=0.436 IT(raw)=0.226 (nll 3.00) rating=8.20
+    glm    : Base(raw)=0.267 (nll 3.23) | IT(chat)=0.659 IT(raw)=0.283 (nll 3.36) rating=8.30
+    NLL-matched (±0.15 nats, n=117): human says_ai=0.706 vs AI says_ai=0.537 (Δ=+0.169)
+  2A. books:
+    human  : Base(raw)=0.231 (nll 2.78) | IT(chat)=0.556 IT(raw)=0.161 (nll 2.85) rating=7.45
+    gemma  : Base(raw)=0.244 (nll 2.57) | IT(chat)=0.249 IT(raw)=0.064 (nll 2.58) rating=8.33
+    gpt    : Base(raw)=0.209 (nll 2.59) | IT(chat)=0.267 IT(raw)=0.082 (nll 2.67) rating=7.85
+    glm    : Base(raw)=0.269 (nll 2.70) | IT(chat)=0.262 IT(raw)=0.101 (nll 2.79) rating=8.09
+    NLL-matched (±0.15 nats, n=103): human says_ai=0.545 vs AI says_ai=0.286 (Δ=+0.259)
+  2B. Causal Coupling (steering layers [8, 12, 16, 21]):
+    base      : p_hum=0.02 alive=1.00 born=0.00 ai=1.00 | wp(H=0.68,G=0.63,C=0.49,inv=+0.12) bk(H=0.54,G=0.29,inv=+0.25) | 2+2=1.00
+    unzip 0.5 : p_hum=0.06 alive=1.00 born=0.00 ai=1.00 | wp(H=0.66,G=0.60,C=0.43,inv=+0.14) bk(H=0.50,G=0.27,inv=+0.23) | 2+2=1.00
+    rand  0.5 : p_hum=0.04 alive=1.00 born=0.00 ai=1.00 | wp(H=0.65,G=0.55,C=0.47,inv=+0.14) bk(H=0.50,G=0.24,inv=+0.26) | 2+2=1.00
+    unzip 1.0 : p_hum=0.08 alive=1.00 born=0.00 ai=1.00 | wp(H=0.52,G=0.35,C=0.32,inv=+0.18) bk(H=0.29,G=0.09,inv=+0.20) | 2+2=1.00
+    rand  1.0 : p_hum=0.05 alive=1.00 born=0.00 ai=1.00 | wp(H=0.64,G=0.50,C=0.47,inv=+0.15) bk(H=0.47,G=0.21,inv=+0.26) | 2+2=1.00
+    unzip 1.5 : p_hum=0.09 alive=1.00 born=0.00 ai=1.00 | wp(H=0.42,G=0.26,C=0.27,inv=+0.16) bk(H=0.18,G=0.04,inv=+0.14) | 2+2=1.00
+    rand  1.5 : p_hum=0.06 alive=1.00 born=0.01 ai=1.00 | wp(H=0.70,G=0.51,C=0.53,inv=+0.19) bk(H=0.48,G=0.24,inv=+0.24) | 2+2=1.00
+
+================ EXP 3: BASE <-> IT WEIGHT GRAFTING ================
+
+--- GEMMA (NL=34, bands={'early': [0, 10], 'mid': [11, 21], 'late': [22, 33], 'all': [0, 33]}) ---
+  graft                              | ai   aliv born phum | wpH  wpG  wpC  inv   | refH refB | t/2+2    
+  pure_it                            | 1.00 0.00 0.00 0.00 | 0.03 0.04 0.00 +0.01 | 0.45 0.00 | 0.00/1.00
+  pure_base                          | 0.49 0.74 0.75 0.75 | 0.18 0.15 0.25 -0.02 | 0.00 0.00 | 0.54/0.70
+  it_plus_base__embed_head_embed_head | 1.00 0.00 0.00 0.00 | 0.01 0.04 0.00 -0.00 | 0.20 0.00 | 0.00/1.00
+  it_plus_base__early_all            | 0.59 0.91 0.89 0.89 | 0.27 0.18 0.30 +0.04 | 0.35 0.00 | 0.64/0.89
+  it_plus_base__mid_all              | 0.00 0.00 0.00 0.54 | 0.69 0.44 0.56 +0.19 | 0.65 0.00 | 0.00/0.96
+  it_plus_base__late_all             | 0.99 0.12 0.10 0.06 | 0.24 0.11 0.13 +0.12 | 0.70 0.00 | 0.03/0.99
+  it_plus_base__all_attn             | 1.00 0.98 1.00 0.20 | 0.19 0.07 0.06 +0.13 | 0.30 0.00 | 0.93/1.00
+  it_plus_base__all_mlp              | 0.06 0.19 0.17 0.37 | 0.83 0.79 0.82 +0.03 | 0.65 0.05 | 0.11/0.58
+  it_plus_base__early_attn           | 1.00 0.92 0.00 0.08 | 0.01 0.00 0.00 +0.01 | 0.45 0.00 | 0.00/1.00
+  it_plus_base__early_mlp            | 1.00 1.00 0.98 0.61 | 0.47 0.26 0.17 +0.25 | 0.70 0.00 | 0.99/1.00
+  it_plus_base__mid_attn             | 1.00 0.00 0.73 0.19 | 0.09 0.00 0.00 +0.09 | 0.35 0.00 | 0.00/1.00
+  it_plus_base__mid_mlp              | 0.32 0.00 0.00 0.24 | 0.59 0.30 0.46 +0.21 | 0.45 0.00 | 0.00/1.00
+  it_plus_base__late_attn            | 1.00 0.01 0.02 0.01 | 0.03 0.02 0.00 +0.01 | 0.25 0.00 | 0.00/1.00
+  it_plus_base__late_mlp             | 0.99 0.02 0.01 0.03 | 0.16 0.06 0.06 +0.10 | 0.80 0.00 | 0.00/1.00
+  base_plus_it__embed_head_embed_head | 0.21 0.55 0.52 0.35 | 0.56 0.51 0.63 -0.01 | 0.00 0.00 | 0.44/0.50
+  base_plus_it__early_all            | 0.33 0.28 0.27 0.66 | 0.39 0.31 0.35 +0.06 | 0.80 0.00 | 0.29/0.81
+  base_plus_it__mid_all              | 0.20 0.78 0.77 0.80 | 0.21 0.19 0.28 -0.02 | 0.10 0.00 | 0.59/0.81
+  base_plus_it__late_all             | 0.74 0.95 0.89 0.68 | 0.05 0.04 0.12 -0.03 | 0.05 0.00 | 0.58/0.84
+  base_plus_it__all_attn             | 0.12 0.52 0.56 0.64 | 0.50 0.43 0.51 +0.03 | 0.35 0.00 | 0.19/0.69
+  base_plus_it__all_mlp              | 1.00 1.00 1.00 0.26 | 0.02 0.00 0.00 +0.02 | 0.45 0.00 | 0.97/1.00
+  base_plus_it__early_attn           | 0.20 0.65 0.63 0.66 | 0.53 0.52 0.60 -0.02 | 0.25 0.00 | 0.39/0.71
+  base_plus_it__early_mlp            | 0.39 0.26 0.31 0.65 | 0.40 0.37 0.34 +0.05 | 0.70 0.00 | 0.26/0.82
+  base_plus_it__mid_attn             | 0.47 0.71 0.74 0.78 | 0.20 0.16 0.24 -0.00 | 0.00 0.00 | 0.58/0.70
+  base_plus_it__mid_mlp              | 0.22 0.77 0.77 0.82 | 0.26 0.20 0.33 -0.01 | 0.00 0.00 | 0.57/0.81
+  base_plus_it__late_attn            | 0.44 0.73 0.71 0.65 | 0.17 0.15 0.30 -0.06 | 0.00 0.00 | 0.44/0.68
+  base_plus_it__late_mlp             | 0.77 0.95 0.92 0.75 | 0.10 0.07 0.15 -0.01 | 0.00 0.00 | 0.67/0.86
+
+--- LLAMA (NL=32, bands={'early': [0, 9], 'mid': [10, 20], 'late': [21, 31], 'all': [0, 31]}) ---
+  graft                              | ai   aliv born phum | wpH  wpG  wpC  inv   | refH refB | t/2+2    
+  pure_it                            | 1.00 0.00 0.00 0.11 | 0.24 0.14 0.07 +0.13 | 1.00 0.00 | 0.00/1.00
+  pure_base                          | 0.63 0.77 0.71 0.23 | 0.83 0.80 0.84 +0.01 | 0.00 0.00 | 0.58/0.68
+  it_plus_base__embed_head_embed_head | 1.00 0.00 0.00 0.13 | 0.24 0.14 0.07 +0.13 | 0.90 0.00 | 0.00/1.00
+  it_plus_base__early_all            | 0.74 0.90 0.79 0.72 | 0.27 0.23 0.28 +0.02 | 0.40 0.00 | 0.51/0.85
+  it_plus_base__mid_all              | 0.92 0.02 0.00 0.29 | 0.19 0.15 0.08 +0.08 | 0.35 0.00 | 0.01/0.97
+  it_plus_base__late_all             | 1.00 0.00 0.00 0.12 | 0.25 0.17 0.10 +0.12 | 1.00 0.00 | 0.00/1.00
+  it_plus_base__all_attn             | 0.99 0.01 0.00 0.12 | 0.18 0.08 0.05 +0.12 | 0.90 0.00 | 0.00/1.00
+  it_plus_base__all_mlp              | 0.69 0.86 0.80 0.81 | 0.39 0.41 0.39 -0.01 | 0.55 0.00 | 0.17/1.00
+  it_plus_base__early_attn           | 1.00 0.00 0.00 0.08 | 0.18 0.06 0.02 +0.14 | 0.95 0.00 | 0.00/1.00
+  it_plus_base__early_mlp            | 0.85 0.78 0.86 0.75 | 0.43 0.45 0.41 -0.00 | 0.95 0.00 | 0.03/1.00
+  it_plus_base__mid_attn             | 1.00 0.00 0.00 0.13 | 0.22 0.12 0.07 +0.13 | 1.00 0.00 | 0.00/1.00
+  it_plus_base__mid_mlp              | 0.99 0.00 0.00 0.18 | 0.29 0.21 0.10 +0.14 | 0.95 0.00 | 0.00/1.00
+  it_plus_base__late_attn            | 1.00 0.00 0.00 0.10 | 0.27 0.17 0.10 +0.14 | 1.00 0.00 | 0.00/1.00
+  it_plus_base__late_mlp             | 1.00 0.00 0.00 0.12 | 0.22 0.13 0.07 +0.11 | 1.00 0.00 | 0.00/1.00
+  base_plus_it__embed_head_embed_head | 0.63 0.73 0.65 0.25 | 0.70 0.68 0.69 +0.01 | 0.05 0.00 | 0.61/0.62
+  base_plus_it__early_all            | 0.84 0.06 0.02 0.34 | 0.21 0.16 0.10 +0.07 | 0.80 0.00 | 0.03/0.91
+  base_plus_it__mid_all              | 0.76 0.89 0.85 0.63 | 0.51 0.56 0.57 -0.05 | 0.50 0.00 | 0.68/0.93
+  base_plus_it__late_all             | 0.49 0.76 0.66 0.44 | 0.68 0.71 0.75 -0.05 | 0.00 0.00 | 0.41/0.64
+  base_plus_it__all_attn             | 0.76 0.89 0.82 0.77 | 0.53 0.54 0.53 +0.00 | 0.90 0.00 | 0.30/1.00
+  base_plus_it__all_mlp              | 0.99 0.02 0.00 0.11 | 0.15 0.06 0.04 +0.10 | 0.55 0.00 | 0.00/1.00
+  base_plus_it__early_attn           | 0.81 0.91 0.86 0.51 | 0.75 0.76 0.78 -0.02 | 0.60 0.00 | 0.56/0.98
+  base_plus_it__early_mlp            | 0.77 0.16 0.13 0.33 | 0.32 0.28 0.20 +0.08 | 0.80 0.00 | 0.04/0.96
+  base_plus_it__mid_attn             | 0.68 0.82 0.74 0.22 | 0.84 0.83 0.86 -0.00 | 0.05 0.00 | 0.53/0.76
+  base_plus_it__mid_mlp              | 0.72 0.87 0.81 0.41 | 0.68 0.71 0.74 -0.04 | 0.20 0.00 | 0.70/0.85
+  base_plus_it__late_attn            | 0.54 0.72 0.65 0.27 | 0.78 0.77 0.82 -0.01 | 0.05 0.00 | 0.49/0.64
+  base_plus_it__late_mlp             | 0.65 0.83 0.76 0.31 | 0.80 0.78 0.84 -0.01 | 0.00 0.00 | 0.59/0.73
+
+--- QWEN (NL=28, bands={'early': [0, 8], 'mid': [9, 17], 'late': [18, 27], 'all': [0, 27]}) ---
+  graft                              | ai   aliv born phum | wpH  wpG  wpC  inv   | refH refB | t/2+2    
+  pure_it                            | 1.00 1.00 0.00 0.02 | 0.68 0.59 0.47 +0.15 | 1.00 0.00 | 0.00/1.00
+  pure_base                          | 0.92 0.97 0.67 0.17 | 0.37 0.30 0.28 +0.08 | 0.90 0.00 | 0.34/0.98
+  it_plus_base__embed_head_embed_head | 1.00 1.00 0.00 0.02 | 0.69 0.58 0.46 +0.17 | 1.00 0.00 | 0.00/1.00
+  it_plus_base__early_all            | 1.00 1.00 0.00 0.00 | 1.00 0.99 0.91 +0.05 | 1.00 0.00 | 0.00/1.00
+  it_plus_base__mid_all              | 1.00 0.99 0.00 0.02 | 0.89 0.74 0.73 +0.15 | 1.00 0.00 | 0.00/1.00
+  it_plus_base__late_all             | 1.00 0.98 0.08 0.03 | 0.64 0.51 0.46 +0.16 | 1.00 0.00 | 0.00/0.99
+  it_plus_base__all_attn             | 1.00 1.00 0.01 0.05 | 0.68 0.48 0.45 +0.21 | 1.00 0.00 | 0.00/1.00
+  it_plus_base__all_mlp              | 0.99 0.98 0.58 0.04 | 0.95 0.96 0.94 -0.00 | 1.00 0.00 | 0.00/0.99
+  it_plus_base__early_attn           | 1.00 1.00 0.00 0.08 | 0.71 0.57 0.44 +0.20 | 1.00 0.00 | 0.00/1.00
+  it_plus_base__early_mlp            | 1.00 1.00 0.01 0.07 | 0.94 0.91 0.79 +0.09 | 1.00 0.00 | 0.00/1.00
+  it_plus_base__mid_attn             | 1.00 1.00 0.00 0.00 | 0.74 0.60 0.54 +0.17 | 1.00 0.00 | 0.00/1.00
+  it_plus_base__mid_mlp              | 1.00 1.00 0.00 0.01 | 0.79 0.52 0.59 +0.24 | 1.00 0.00 | 0.00/1.00
+  it_plus_base__late_attn            | 1.00 1.00 0.00 0.04 | 0.66 0.55 0.45 +0.16 | 1.00 0.00 | 0.00/1.00
+  it_plus_base__late_mlp             | 1.00 1.00 0.03 0.03 | 0.64 0.51 0.44 +0.17 | 1.00 0.00 | 0.00/1.00
+  base_plus_it__embed_head_embed_head | 0.92 0.96 0.61 0.14 | 0.47 0.43 0.47 +0.02 | 1.00 0.00 | 0.41/0.97
+  base_plus_it__early_all            | 0.97 0.91 0.23 0.06 | 0.73 0.63 0.62 +0.10 | 0.95 0.00 | 0.05/0.98
+  base_plus_it__mid_all              | 0.97 0.95 0.37 0.02 | 0.88 0.84 0.82 +0.05 | 1.00 0.00 | 0.01/0.98
+  base_plus_it__late_all             | 0.99 1.00 0.42 0.10 | 0.91 0.81 0.79 +0.10 | 1.00 0.00 | 0.00/0.99
+  base_plus_it__all_attn             | 0.99 0.97 0.57 0.05 | 0.95 0.96 0.93 +0.00 | 1.00 0.00 | 0.00/1.00
+  base_plus_it__all_mlp              | 1.00 1.00 0.01 0.04 | 0.70 0.53 0.47 +0.20 | 1.00 0.00 | 0.00/1.00
+  base_plus_it__early_attn           | 0.95 0.91 0.56 0.09 | 0.90 0.94 0.92 -0.03 | 0.95 0.00 | 0.23/0.98
+  base_plus_it__early_mlp            | 0.98 0.92 0.35 0.07 | 0.76 0.72 0.66 +0.07 | 0.95 0.05 | 0.02/0.98
+  base_plus_it__mid_attn             | 0.97 0.97 0.65 0.12 | 0.62 0.69 0.57 -0.00 | 1.00 0.00 | 0.16/0.98
+  base_plus_it__mid_mlp              | 0.96 0.94 0.36 0.05 | 0.86 0.83 0.80 +0.05 | 1.00 0.05 | 0.03/0.97
+  base_plus_it__late_attn            | 0.96 0.99 0.63 0.11 | 0.54 0.46 0.44 +0.10 | 0.90 0.00 | 0.16/0.99
+  base_plus_it__late_mlp             | 0.97 0.99 0.63 0.11 | 0.69 0.58 0.57 +0.12 | 1.00 0.00 | 0.02/0.98

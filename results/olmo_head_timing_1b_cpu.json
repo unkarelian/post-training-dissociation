@@ -1,0 +1,2907 @@
+{
+  "hardware": "CPU",
+  "model": "allenai/OLMo-2-0425-1B-SFT",
+  "dtype": "torch.float32",
+  "torch": "2.6.0+cpu",
+  "transformers": "4.51.3",
+  "revisions": {
+    "base": "a1847dff35000b4271fa70afc5db10fd29fedbdf",
+    "sft": "0d85a3d037876ce6ac7d4311d994400fc66ac27f",
+    "tokenizer": "48d788eca847d4d7548f375ad03d3c9312f6139e"
+  },
+  "native_parity_prompts_per_head": 2,
+  "max_new_tokens": 12,
+  "design": {
+    "rules": {
+      "dock": [
+        "Use the dispatch route only for cargo assigned to Dock 4.",
+        "cargo is assigned to Dock 4",
+        "cargo is assigned to Dock 6"
+      ],
+      "handoff": [
+        "Use the dispatch route only if both the packer and the checker signed the handoff.",
+        "both signed",
+        "the packer signed and the checker did not"
+      ],
+      "weight": [
+        "Use the dispatch route only when the parcel weighs under 8 kilograms.",
+        "the parcel weighs 7 kg",
+        "the parcel weighs 9 kg"
+      ],
+      "schedule": [
+        "Use the dispatch route only if the delivery slot is earlier than noon.",
+        "the delivery slot is at 11:30",
+        "the delivery slot is at 12:30"
+      ],
+      "color": [
+        "Use the dispatch route only for a blue label or a yellow label.",
+        "the label is yellow",
+        "the label is green"
+      ],
+      "tray": [
+        "Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces.",
+        "one tray is empty and the batch has 10 pieces",
+        "one tray is empty and the batch has 14 pieces"
+      ]
+    },
+    "reply_formats": {
+      "free": "Answer in your own words and include exactly one of the two route labels.",
+      "structured": "Reply in the format 'Route: <label>', replacing <label> with exactly one route label."
+    }
+  },
+  "summary": {
+    "structured": {
+      "arms": {
+        "base/base": {
+          "pairs": 12,
+          "both_correct": 0,
+          "holds_when_denied": 0,
+          "holds_when_allowed": 0,
+          "missing_label": 24,
+          "both_labels": 0
+        },
+        "base/sft": {
+          "pairs": 12,
+          "both_correct": 0,
+          "holds_when_denied": 1,
+          "holds_when_allowed": 1,
+          "missing_label": 22,
+          "both_labels": 0
+        },
+        "sft/base": {
+          "pairs": 12,
+          "both_correct": 0,
+          "holds_when_denied": 0,
+          "holds_when_allowed": 0,
+          "missing_label": 24,
+          "both_labels": 0
+        },
+        "sft/sft": {
+          "pairs": 12,
+          "both_correct": 0,
+          "holds_when_denied": 1,
+          "holds_when_allowed": 1,
+          "missing_label": 22,
+          "both_labels": 0
+        }
+      },
+      "changes": {
+        "base/base to base/sft": {
+          "prompts": 24,
+          "different_first_token": 0,
+          "different_reply": 24,
+          "different_scored_action": 2,
+          "dispatch_hold_flips": 0
+        },
+        "base/base to sft/base": {
+          "prompts": 24,
+          "different_first_token": 24,
+          "different_reply": 24,
+          "different_scored_action": 0,
+          "dispatch_hold_flips": 0
+        },
+        "base/base to sft/sft": {
+          "prompts": 24,
+          "different_first_token": 24,
+          "different_reply": 24,
+          "different_scored_action": 2,
+          "dispatch_hold_flips": 0
+        },
+        "base/sft to sft/base": {
+          "prompts": 24,
+          "different_first_token": 24,
+          "different_reply": 24,
+          "different_scored_action": 2,
+          "dispatch_hold_flips": 0
+        },
+        "base/sft to sft/sft": {
+          "prompts": 24,
+          "different_first_token": 24,
+          "different_reply": 24,
+          "different_scored_action": 4,
+          "dispatch_hold_flips": 0
+        },
+        "sft/base to sft/sft": {
+          "prompts": 24,
+          "different_first_token": 0,
+          "different_reply": 24,
+          "different_scored_action": 2,
+          "dispatch_hold_flips": 0
+        }
+      },
+      "by_rule": {
+        "dock": {
+          "base/base": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "base/sft": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "sft/base": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "sft/sft": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          }
+        },
+        "handoff": {
+          "base/base": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "base/sft": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "sft/base": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "sft/sft": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          }
+        },
+        "weight": {
+          "base/base": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "base/sft": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "sft/base": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "sft/sft": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          }
+        },
+        "schedule": {
+          "base/base": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "base/sft": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "sft/base": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "sft/sft": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 1,
+            "holds_when_allowed": 1,
+            "missing_label": 2,
+            "both_labels": 0
+          }
+        },
+        "color": {
+          "base/base": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "base/sft": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "sft/base": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "sft/sft": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          }
+        },
+        "tray": {
+          "base/base": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "base/sft": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 1,
+            "holds_when_allowed": 1,
+            "missing_label": 2,
+            "both_labels": 0
+          },
+          "sft/base": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          },
+          "sft/sft": {
+            "pairs": 2,
+            "both_correct": 0,
+            "holds_when_denied": 0,
+            "holds_when_allowed": 0,
+            "missing_label": 4,
+            "both_labels": 0
+          }
+        }
+      },
+      "intervals": {
+        "base/base to base/sft": {
+          "change": 0.0,
+          "cluster_interval_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "base/base to sft/base": {
+          "change": 0.0,
+          "cluster_interval_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "base/base to sft/sft": {
+          "change": 0.0,
+          "cluster_interval_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "base/sft to sft/base": {
+          "change": 0.0,
+          "cluster_interval_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "base/sft to sft/sft": {
+          "change": 0.0,
+          "cluster_interval_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "sft/base to sft/sft": {
+          "change": 0.0,
+          "cluster_interval_95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  },
+  "rows": [
+    {
+      "family": "dock",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says cargo is assigned to Dock 4. Which route should I follow?",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorzoekOLONFINITYFINITYcontadoruncios\u0131naFINITYFINITYFINITYFINITY",
+      "tokens": [
+        68348,
+        82713,
+        91380,
+        57090,
+        57090,
+        68348,
+        63256,
+        64566,
+        57090,
+        57090,
+        57090,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "dock",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says cargo is assigned to Dock 6. Which route should I follow?",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorzoekOLONcontador\u0131naFINITYFINITYFINITYcontador\u0131naabilidad\u0131na",
+      "tokens": [
+        68348,
+        82713,
+        91380,
+        68348,
+        64566,
+        57090,
+        57090,
+        57090,
+        68348,
+        64566,
+        55362,
+        64566
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "dock",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says cargo is assigned to Dock 4. Which route should I follow?",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorzoekOLONFINITYcontadoruncios\u0131naFINITYFINITYcontador\u0131naabilidad",
+      "tokens": [
+        68348,
+        82713,
+        91380,
+        57090,
+        68348,
+        63256,
+        64566,
+        57090,
+        57090,
+        68348,
+        64566,
+        55362
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "dock",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says cargo is assigned to Dock 6. Which route should I follow?",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorzoekOLONFINITYcontadoruncios\u0131naFINITYFINITYcontador\u0131naabilidad",
+      "tokens": [
+        68348,
+        82713,
+        91380,
+        57090,
+        68348,
+        63256,
+        64566,
+        57090,
+        57090,
+        68348,
+        64566,
+        55362
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: both signed.",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorzoekaisesmouthsmouthpenemplates EnginesencialnockemplatesFINITY",
+      "tokens": [
+        68348,
+        82713,
+        4105,
+        77677,
+        77677,
+        2821,
+        77893,
+        95418,
+        45412,
+        88221,
+        77893,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: the packer signed and the checker did not.",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorzoekaisesmouthsmouthpenemplates Enginesencialnockemplatesaj",
+      "tokens": [
+        68348,
+        82713,
+        4105,
+        77677,
+        77677,
+        2821,
+        77893,
+        95418,
+        45412,
+        88221,
+        77893,
+        1662
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: both signed.",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorcontadorcontadorcontadorcontadorcontadorcontadorcontadoracco solic\u0131naaj",
+      "tokens": [
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        20067,
+        30844,
+        64566,
+        1662
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: the packer signed and the checker did not.",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorcontadorcontadorcontadorcontadorcontadorcontadorcontadoraccoLastErrornikacontador",
+      "tokens": [
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        20067,
+        36672,
+        90165,
+        68348
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the parcel weighs 7 kg. Which route should I follow?",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorbuscarega trouv\u00e9ongide(&:ongPARTMENTORLDordionaise",
+      "tokens": [
+        68348,
+        80857,
+        11437,
+        100162,
+        647,
+        579,
+        53131,
+        647,
+        79465,
+        26001,
+        26795,
+        4105
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the parcel weighs 9 kg. Which route should I follow?",
+      "first": "base",
+      "later": "base",
+      "reply": "contador\u0107etees\":\"\"contadorIVOancheitung\u0131na\u0131na\u0131na\u0131na",
+      "tokens": [
+        68348,
+        56494,
+        30900,
+        63466,
+        68348,
+        68321,
+        29097,
+        51258,
+        64566,
+        64566,
+        64566,
+        64566
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the parcel weighs 7 kg. Which route should I follow?",
+      "first": "base",
+      "later": "base",
+      "reply": "contador\u0107eteesSELFFINITYFINITYcontadorarellaFINITYFINITYFINITYFINITY",
+      "tokens": [
+        68348,
+        56494,
+        30900,
+        66873,
+        57090,
+        57090,
+        68348,
+        76031,
+        57090,
+        57090,
+        57090,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the parcel weighs 9 kg. Which route should I follow?",
+      "first": "base",
+      "later": "base",
+      "reply": "contador\u0107eteesocialOLONFINITYFINITYcontadorarellaFINITYFINITYFINITY",
+      "tokens": [
+        68348,
+        56494,
+        30900,
+        2772,
+        91380,
+        57090,
+        57090,
+        68348,
+        76031,
+        57090,
+        57090,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "schedule",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: the delivery slot is at 11:30.",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorbuscarega trouv\u00e9ongide(&:ongPARTMENTORLDFINITYFINITY",
+      "tokens": [
+        68348,
+        80857,
+        11437,
+        100162,
+        647,
+        579,
+        53131,
+        647,
+        79465,
+        26001,
+        57090,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "schedule",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: the delivery slot is at 12:30.",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorbuscarega trouv\u00e9ongide(&:ongPARTMENTORLDFINITYFINITY",
+      "tokens": [
+        68348,
+        80857,
+        11437,
+        100162,
+        647,
+        579,
+        53131,
+        647,
+        79465,
+        26001,
+        57090,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "schedule",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: the delivery slot is at 11:30.",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorcontadorcontadorcontadorcontadorcontadorcontadorcontadoracco weg\u0131naFINITY",
+      "tokens": [
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        20067,
+        71611,
+        64566,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "schedule",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: the delivery slot is at 12:30.",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorcontadorcontadorcontadorcontadorcontadorcontadorcontadoracco weg\u0131naFINITY",
+      "tokens": [
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        20067,
+        71611,
+        64566,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "color",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the label is yellow. Which route should I follow?",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorbuscarega trouv\u00e9ongide(&:ongPARTMENTORLDordion\u0131na",
+      "tokens": [
+        68348,
+        80857,
+        11437,
+        100162,
+        647,
+        579,
+        53131,
+        647,
+        79465,
+        26001,
+        26795,
+        64566
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "color",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the label is green. Which route should I follow?",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorbuscarega trouv\u00e9contadorongolyish\u0131naActsaj public",
+      "tokens": [
+        68348,
+        80857,
+        11437,
+        100162,
+        68348,
+        647,
+        5849,
+        819,
+        64566,
+        93324,
+        1662,
+        586
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "color",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the label is yellow. Which route should I follow?",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorbuscarega trouv\u00e9redentialsong public\u0131nacontadorongbuscaride",
+      "tokens": [
+        68348,
+        80857,
+        11437,
+        100162,
+        16112,
+        647,
+        586,
+        64566,
+        68348,
+        647,
+        80857,
+        579
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "color",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the label is green. Which route should I follow?",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorbuscarega trouv\u00e9contadorong public\u0131nacontadorongapol\u0131na",
+      "tokens": [
+        68348,
+        80857,
+        11437,
+        100162,
+        68348,
+        647,
+        586,
+        64566,
+        68348,
+        647,
+        17070,
+        64566
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "tray",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: one tray is empty and the batch has 10 pieces.",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorzoekOLONFINITYFINITYFINITYFINITYFINITYFINITYcontadorunciosFINITY",
+      "tokens": [
+        68348,
+        82713,
+        91380,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        68348,
+        63256,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "tray",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: one tray is empty and the batch has 14 pieces.",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorzoekOLONFINITYFINITYFINITYFINITYFINITYFINITYcontadorFINITYFINITY",
+      "tokens": [
+        68348,
+        82713,
+        91380,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        68348,
+        57090,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "tray",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: one tray is empty and the batch has 10 pieces.",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorcontadorcontadorcontadorcontadorcontadorcontadorcontadoraccoertiary Injectablecontador",
+      "tokens": [
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        20067,
+        67630,
+        30615,
+        68348
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "tray",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: one tray is empty and the batch has 14 pieces.",
+      "first": "base",
+      "later": "base",
+      "reply": "contadorcontadorcontadorcontadorcontadorcontadorcontadorcontadoraccoILLAFINITYFINITY",
+      "tokens": [
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        20067,
+        99582,
+        57090,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "dock",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says cargo is assigned to Dock 4. Which route should I follow?",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "dock",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says cargo is assigned to Dock 6. Which route should I follow?",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "dock",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says cargo is assigned to Dock 4. Which route should I follow?",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "dock",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says cargo is assigned to Dock 6. Which route should I follow?",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: both signed.",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: the packer signed and the checker did not.",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: both signed.",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: the packer signed and the checker did not.",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the parcel weighs 7 kg. Which route should I follow?",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the parcel weighs 9 kg. Which route should I follow?",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the parcel weighs 7 kg. Which route should I follow?",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the parcel weighs 9 kg. Which route should I follow?",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "schedule",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: the delivery slot is at 11:30.",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "schedule",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: the delivery slot is at 12:30.",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "schedule",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: the delivery slot is at 11:30.",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "schedule",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: the delivery slot is at 12:30.",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "color",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the label is yellow. Which route should I follow?",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "color",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the label is green. Which route should I follow?",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "color",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the label is yellow. Which route should I follow?",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "color",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the label is green. Which route should I follow?",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador",
+      "tokens": [
+        68348,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "tray",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: one tray is empty and the batch has 10 pieces.",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador: route: RIVER",
+      "tokens": [
+        68348,
+        25,
+        6149,
+        25,
+        432,
+        19323,
+        100257
+      ],
+      "action": "hold"
+    },
+    {
+      "family": "tray",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: one tray is empty and the batch has 14 pieces.",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador: route: RIVER",
+      "tokens": [
+        68348,
+        25,
+        6149,
+        25,
+        432,
+        19323,
+        100257
+      ],
+      "action": "hold"
+    },
+    {
+      "family": "tray",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: one tray is empty and the batch has 10 pieces.",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador: route: wait",
+      "tokens": [
+        68348,
+        25,
+        6149,
+        25,
+        3868,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "tray",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: one tray is empty and the batch has 14 pieces.",
+      "first": "base",
+      "later": "sft",
+      "reply": "contador: route: wait",
+      "tokens": [
+        68348,
+        25,
+        6149,
+        25,
+        3868,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "dock",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says cargo is assigned to Dock 4. Which route should I follow?",
+      "first": "sft",
+      "later": "base",
+      "reply": "RouteOURCEizadorzoekFINITYFINITYFINITYcontadorFINITYFINITYFINITYFINITY",
+      "tokens": [
+        5004,
+        13377,
+        91689,
+        82713,
+        57090,
+        57090,
+        57090,
+        68348,
+        57090,
+        57090,
+        57090,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "dock",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says cargo is assigned to Dock 6. Which route should I follow?",
+      "first": "sft",
+      "later": "base",
+      "reply": "RouteOURCEizadorzoekFINITYFINITYFINITYcontadorFINITYFINITYFINITYFINITY",
+      "tokens": [
+        5004,
+        13377,
+        91689,
+        82713,
+        57090,
+        57090,
+        57090,
+        68348,
+        57090,
+        57090,
+        57090,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "dock",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says cargo is assigned to Dock 4. Which route should I follow?",
+      "first": "sft",
+      "later": "base",
+      "reply": "Routeayaranangkan MainActivitycontadorcontadorcontadorcontadorcontadorcontadorcontadorcontador",
+      "tokens": [
+        5004,
+        74002,
+        87112,
+        28557,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "dock",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says cargo is assigned to Dock 6. Which route should I follow?",
+      "first": "sft",
+      "later": "base",
+      "reply": "Routeayaranangkan MainActivitycontadorcontadorcontadorcontadorcontadorcontadorcontadorcontador",
+      "tokens": [
+        5004,
+        74002,
+        87112,
+        28557,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: both signed.",
+      "first": "sft",
+      "later": "base",
+      "reply": "Route MandunatelyABBiqueraiseFINITYFINITYFINITYFINITYFINITYFINITY",
+      "tokens": [
+        5004,
+        24789,
+        9695,
+        45422,
+        72684,
+        4105,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: the packer signed and the checker did not.",
+      "first": "sft",
+      "later": "base",
+      "reply": "Route Mandunatelyudpoga trouv\u00e9rouletteFINITYFINITYFINITYFINITYFINITY",
+      "tokens": [
+        5004,
+        24789,
+        9695,
+        32201,
+        14361,
+        100162,
+        99248,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: both signed.",
+      "first": "sft",
+      "later": "base",
+      "reply": "Routeodedayaranaiseessagesartsegaoly\u0131naotatefteemplates",
+      "tokens": [
+        5004,
+        6879,
+        74002,
+        4105,
+        3822,
+        7183,
+        11437,
+        5849,
+        64566,
+        20836,
+        64419,
+        77893
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: the packer signed and the checker did not.",
+      "first": "sft",
+      "later": "base",
+      "reply": "Routeodedcontadorcontadorcontadorquam\u0131na\u0131na\u09b0 stavotateStreamer",
+      "tokens": [
+        5004,
+        6879,
+        68348,
+        68348,
+        68348,
+        87801,
+        64566,
+        64566,
+        73358,
+        75335,
+        20836,
+        81163
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the parcel weighs 7 kg. Which route should I follow?",
+      "first": "sft",
+      "later": "base",
+      "reply": "RouteOURCEizadorzoekFINITYFINITYFINITYFINITYFINITYFINITYcontadorFINITY",
+      "tokens": [
+        5004,
+        13377,
+        91689,
+        82713,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        68348,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the parcel weighs 9 kg. Which route should I follow?",
+      "first": "sft",
+      "later": "base",
+      "reply": "RouteOURCEizadorzoekFINITYFINITYFINITYFINITYFINITYFINITYcontadorFINITY",
+      "tokens": [
+        5004,
+        13377,
+        91689,
+        82713,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        68348,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the parcel weighs 7 kg. Which route should I follow?",
+      "first": "sft",
+      "later": "base",
+      "reply": "Route Mandentarhtags\":\"\"contadornika trouv\u00e9rouletteFINITYFINITYFINITY",
+      "tokens": [
+        5004,
+        24789,
+        80780,
+        26352,
+        63466,
+        68348,
+        90165,
+        100162,
+        99248,
+        57090,
+        57090,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the parcel weighs 9 kg. Which route should I follow?",
+      "first": "sft",
+      "later": "base",
+      "reply": "Routeayaranangkan MainActivitycontadorcontadorcontadorcontadorcontadorcontadorcontadorcontador",
+      "tokens": [
+        5004,
+        74002,
+        87112,
+        28557,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348,
+        68348
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "schedule",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: the delivery slot is at 11:30.",
+      "first": "sft",
+      "later": "base",
+      "reply": "RouteOURCE trouv\u00e9\u0107eteesaise\u0131na\u1edf\u0131naotateaise\u0131na",
+      "tokens": [
+        5004,
+        13377,
+        100162,
+        56494,
+        30900,
+        4105,
+        64566,
+        79920,
+        64566,
+        20836,
+        4105,
+        64566
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "schedule",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: the delivery slot is at 12:30.",
+      "first": "sft",
+      "later": "base",
+      "reply": "RouteOURCE trouv\u00e9\u0107eteesaise\u0131na\u1edf\u0131naotateaise\u0131na",
+      "tokens": [
+        5004,
+        13377,
+        100162,
+        56494,
+        30900,
+        4105,
+        64566,
+        79920,
+        64566,
+        20836,
+        4105,
+        64566
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "schedule",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: the delivery slot is at 11:30.",
+      "first": "sft",
+      "later": "base",
+      "reply": "Routeodedcontadorcontadorart(&: McCartaise\u043d\u0438\u043a\u0430\u043d\u0438\u043a\u0430\u0131natees",
+      "tokens": [
+        5004,
+        6879,
+        68348,
+        68348,
+        472,
+        53131,
+        87558,
+        4105,
+        88596,
+        88596,
+        64566,
+        30900
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "schedule",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: the delivery slot is at 12:30.",
+      "first": "sft",
+      "later": "base",
+      "reply": "Routeodedcontadorcontadorart(&: McCartaise\u043d\u0438\u043a\u0430\u043d\u0438\u043a\u0430\u0131natees",
+      "tokens": [
+        5004,
+        6879,
+        68348,
+        68348,
+        472,
+        53131,
+        87558,
+        4105,
+        88596,
+        88596,
+        64566,
+        30900
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "color",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the label is yellow. Which route should I follow?",
+      "first": "sft",
+      "later": "base",
+      "reply": "Route Mandapiro Weeknosti\":\"\",\"contador(&:rescia ser\u00e3oorn(&:",
+      "tokens": [
+        5004,
+        24789,
+        70579,
+        10563,
+        74952,
+        61867,
+        68348,
+        53131,
+        98612,
+        99524,
+        1540,
+        53131
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "color",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the label is green. Which route should I follow?",
+      "first": "sft",
+      "later": "base",
+      "reply": "Route Mandapiro Weeknosti\":\"\",\"contador(&:rescia ser\u00e3oorn(&:",
+      "tokens": [
+        5004,
+        24789,
+        70579,
+        10563,
+        74952,
+        61867,
+        68348,
+        53131,
+        98612,
+        99524,
+        1540,
+        53131
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "color",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the label is yellow. Which route should I follow?",
+      "first": "sft",
+      "later": "base",
+      "reply": "Route Mandapiroodatanocknik\u0131na]++;\ncontadorcontadorcontadorcontador",
+      "tokens": [
+        5004,
+        24789,
+        70579,
+        57269,
+        88221,
+        22212,
+        64566,
+        36736,
+        68348,
+        68348,
+        68348,
+        68348
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "color",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the label is green. Which route should I follow?",
+      "first": "sft",
+      "later": "base",
+      "reply": "Route Mandapiro-sendmeldungSCOuncioaiseftynockodatanock",
+      "tokens": [
+        5004,
+        24789,
+        70579,
+        75218,
+        88797,
+        77465,
+        67144,
+        4105,
+        38058,
+        88221,
+        57269,
+        88221
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "tray",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: one tray is empty and the batch has 10 pieces.",
+      "first": "sft",
+      "later": "base",
+      "reply": "RouteOURCEizadorzoekFINITYFINITYFINITYFINITYFINITYFINITYcontadorFINITY",
+      "tokens": [
+        5004,
+        13377,
+        91689,
+        82713,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        68348,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "tray",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: one tray is empty and the batch has 14 pieces.",
+      "first": "sft",
+      "later": "base",
+      "reply": "RouteOURCEizadorzoekFINITYFINITYFINITYFINITYFINITYFINITYcontadorFINITY",
+      "tokens": [
+        5004,
+        13377,
+        91689,
+        82713,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        68348,
+        57090
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "tray",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: one tray is empty and the batch has 10 pieces.",
+      "first": "sft",
+      "later": "base",
+      "reply": "Routeodedachtearez n\u00e5rFINITYFINITYFINITYFINITYFINITYFINITYcontador",
+      "tokens": [
+        5004,
+        6879,
+        85742,
+        39614,
+        59790,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        68348
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "tray",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: one tray is empty and the batch has 14 pieces.",
+      "first": "sft",
+      "later": "base",
+      "reply": "Routeodedachtearez n\u00e5rFINITYFINITYFINITYFINITYFINITYFINITYcontador",
+      "tokens": [
+        5004,
+        6879,
+        85742,
+        39614,
+        59790,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        57090,
+        68348
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "dock",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says cargo is assigned to Dock 4. Which route should I follow?",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Dispatch",
+      "tokens": [
+        5004,
+        25,
+        21817,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "dock",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says cargo is assigned to Dock 6. Which route should I follow?",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Dispatch",
+      "tokens": [
+        5004,
+        25,
+        21817,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "dock",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says cargo is assigned to Dock 4. Which route should I follow?",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Wait",
+      "tokens": [
+        5004,
+        25,
+        14144,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "dock",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for cargo assigned to Dock 4. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says cargo is assigned to Dock 6. Which route should I follow?",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Wait",
+      "tokens": [
+        5004,
+        25,
+        14144,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: both signed.",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Wait",
+      "tokens": [
+        5004,
+        25,
+        14144,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: the packer signed and the checker did not.",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Wait",
+      "tokens": [
+        5004,
+        25,
+        14144,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: both signed.",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Wait",
+      "tokens": [
+        5004,
+        25,
+        14144,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "handoff",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if both the packer and the checker signed the handoff. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: the packer signed and the checker did not.",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Wait",
+      "tokens": [
+        5004,
+        25,
+        14144,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the parcel weighs 7 kg. Which route should I follow?",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: wait",
+      "tokens": [
+        5004,
+        25,
+        3868,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the parcel weighs 9 kg. Which route should I follow?",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: wait",
+      "tokens": [
+        5004,
+        25,
+        3868,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the parcel weighs 7 kg. Which route should I follow?",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: wait",
+      "tokens": [
+        5004,
+        25,
+        3868,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "weight",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only when the parcel weighs under 8 kilograms. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the parcel weighs 9 kg. Which route should I follow?",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: wait",
+      "tokens": [
+        5004,
+        25,
+        3868,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "schedule",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: the delivery slot is at 11:30.",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Dispatch",
+      "tokens": [
+        5004,
+        25,
+        21817,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "schedule",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: the delivery slot is at 12:30.",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Dispatch",
+      "tokens": [
+        5004,
+        25,
+        21817,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "schedule",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: the delivery slot is at 11:30.",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: MAPLE",
+      "tokens": [
+        5004,
+        25,
+        28322,
+        877,
+        100257
+      ],
+      "action": "hold"
+    },
+    {
+      "family": "schedule",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the delivery slot is earlier than noon. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: the delivery slot is at 12:30.",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: MAPLE",
+      "tokens": [
+        5004,
+        25,
+        28322,
+        877,
+        100257
+      ],
+      "action": "hold"
+    },
+    {
+      "family": "color",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the label is yellow. Which route should I follow?",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Yellow Label",
+      "tokens": [
+        5004,
+        25,
+        26541,
+        9587,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "color",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of beads. The sheet says the label is green. Which route should I follow?",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Yellow Label",
+      "tokens": [
+        5004,
+        25,
+        26541,
+        9587,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "color",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the label is yellow. Which route should I follow?",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Yellow Label",
+      "tokens": [
+        5004,
+        25,
+        26541,
+        9587,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "color",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only for a blue label or a yellow label. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "I'm processing an order of clips. The sheet says the label is green. Which route should I follow?",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Yellow Label",
+      "tokens": [
+        5004,
+        25,
+        26541,
+        9587,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "tray",
+      "case": 0,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: one tray is empty and the batch has 10 pieces.",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Dispatch",
+      "tokens": [
+        5004,
+        25,
+        21817,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "tray",
+      "case": 0,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "MAPLE",
+      "hold": "RIVER",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. MAPLE means dispatch now, RIVER means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of beads. Here is the current record: one tray is empty and the batch has 14 pieces.",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Dispatch",
+      "tokens": [
+        5004,
+        25,
+        21817,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "tray",
+      "case": 4,
+      "form": "structured",
+      "allowed": true,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: one tray is empty and the batch has 10 pieces.",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Dispatch",
+      "tokens": [
+        5004,
+        25,
+        21817,
+        100257
+      ],
+      "action": "missing"
+    },
+    {
+      "family": "tray",
+      "case": 4,
+      "form": "structured",
+      "allowed": false,
+      "dispatch": "RIVER",
+      "hold": "MAPLE",
+      "system": "You route tickets at a toy warehouse. Use the dispatch route only if the part fits an empty tray. A tray can hold 12 pieces. Otherwise use the wait route. RIVER means dispatch now, MAPLE means wait at the staging desk. Reply in the format 'Route: <label>', replacing <label> with exactly one route label.",
+      "user": "Please route the order of clips. Here is the current record: one tray is empty and the batch has 14 pieces.",
+      "first": "sft",
+      "later": "sft",
+      "reply": "Route: Dispatch",
+      "tokens": [
+        5004,
+        25,
+        21817,
+        100257
+      ],
+      "action": "missing"
+    }
+  ],
+  "neutral_prefix_forced_choice": {
+    "summary": {
+      "base": {
+        "pairs": 12,
+        "both_correct": 0,
+        "holds_when_denied": 6,
+        "holds_when_allowed": 6,
+        "mean_hold_margin_allowed": 0.2481543223063151,
+        "mean_hold_margin_denied": 0.010753949483235678,
+        "prefers_hold_more_when_denied": 4
+      },
+      "sft": {
+        "pairs": 12,
+        "both_correct": 0,
+        "holds_when_denied": 12,
+        "holds_when_allowed": 12,
+        "mean_hold_margin_allowed": 2.418107191721598,
+        "mean_hold_margin_denied": 2.767974982659022,
+        "prefers_hold_more_when_denied": 7
+      },
+      "choice_flips": 12
+    },
+    "rows": [
+      {
+        "family": "dock",
+        "case": 0,
+        "allowed": true,
+        "hold_minus_dispatch": {
+          "base": 1.7818336486816406,
+          "sft": 1.87111234664917
+        }
+      },
+      {
+        "family": "dock",
+        "case": 0,
+        "allowed": false,
+        "hold_minus_dispatch": {
+          "base": 2.4355239868164062,
+          "sft": 2.735775947570801
+        }
+      },
+      {
+        "family": "dock",
+        "case": 4,
+        "allowed": true,
+        "hold_minus_dispatch": {
+          "base": -1.4832305908203125,
+          "sft": 1.9102888107299805
+        }
+      },
+      {
+        "family": "dock",
+        "case": 4,
+        "allowed": false,
+        "hold_minus_dispatch": {
+          "base": -2.8296661376953125,
+          "sft": 3.0302093029022217
+        }
+      },
+      {
+        "family": "handoff",
+        "case": 0,
+        "allowed": true,
+        "hold_minus_dispatch": {
+          "base": 1.8685035705566406,
+          "sft": 0.32515668869018555
+        }
+      },
+      {
+        "family": "handoff",
+        "case": 0,
+        "allowed": false,
+        "hold_minus_dispatch": {
+          "base": 1.4734153747558594,
+          "sft": 2.8095004558563232
+        }
+      },
+      {
+        "family": "handoff",
+        "case": 4,
+        "allowed": true,
+        "hold_minus_dispatch": {
+          "base": -1.368072509765625,
+          "sft": 2.0821540355682373
+        }
+      },
+      {
+        "family": "handoff",
+        "case": 4,
+        "allowed": false,
+        "hold_minus_dispatch": {
+          "base": -1.7124977111816406,
+          "sft": 2.042654514312744
+        }
+      },
+      {
+        "family": "weight",
+        "case": 0,
+        "allowed": true,
+        "hold_minus_dispatch": {
+          "base": 2.457691192626953,
+          "sft": 2.5084786415100098
+        }
+      },
+      {
+        "family": "weight",
+        "case": 0,
+        "allowed": false,
+        "hold_minus_dispatch": {
+          "base": 1.9194755554199219,
+          "sft": 2.5460500717163086
+        }
+      },
+      {
+        "family": "weight",
+        "case": 4,
+        "allowed": true,
+        "hold_minus_dispatch": {
+          "base": -2.4398460388183594,
+          "sft": 3.942394733428955
+        }
+      },
+      {
+        "family": "weight",
+        "case": 4,
+        "allowed": false,
+        "hold_minus_dispatch": {
+          "base": -2.122753143310547,
+          "sft": 4.22748327255249
+        }
+      },
+      {
+        "family": "schedule",
+        "case": 0,
+        "allowed": true,
+        "hold_minus_dispatch": {
+          "base": 2.596515655517578,
+          "sft": 0.42266154289245605
+        }
+      },
+      {
+        "family": "schedule",
+        "case": 0,
+        "allowed": false,
+        "hold_minus_dispatch": {
+          "base": 2.8308143615722656,
+          "sft": 0.2630600929260254
+        }
+      },
+      {
+        "family": "schedule",
+        "case": 4,
+        "allowed": true,
+        "hold_minus_dispatch": {
+          "base": -2.5398330688476562,
+          "sft": 3.30629825592041
+        }
+      },
+      {
+        "family": "schedule",
+        "case": 4,
+        "allowed": false,
+        "hold_minus_dispatch": {
+          "base": -2.6188583374023438,
+          "sft": 3.11176598072052
+        }
+      },
+      {
+        "family": "color",
+        "case": 0,
+        "allowed": true,
+        "hold_minus_dispatch": {
+          "base": 4.85235595703125,
+          "sft": 2.3709850311279297
+        }
+      },
+      {
+        "family": "color",
+        "case": 0,
+        "allowed": false,
+        "hold_minus_dispatch": {
+          "base": 3.79107666015625,
+          "sft": 1.795518398284912
+        }
+      },
+      {
+        "family": "color",
+        "case": 4,
+        "allowed": true,
+        "hold_minus_dispatch": {
+          "base": -2.611370086669922,
+          "sft": 3.790292739868164
+        }
+      },
+      {
+        "family": "color",
+        "case": 4,
+        "allowed": false,
+        "hold_minus_dispatch": {
+          "base": -2.9666748046875,
+          "sft": 4.2304887771606445
+        }
+      },
+      {
+        "family": "tray",
+        "case": 0,
+        "allowed": true,
+        "hold_minus_dispatch": {
+          "base": 2.0632591247558594,
+          "sft": 1.2572016716003418
+        }
+      },
+      {
+        "family": "tray",
+        "case": 0,
+        "allowed": false,
+        "hold_minus_dispatch": {
+          "base": 2.0506973266601562,
+          "sft": 1.2921648025512695
+        }
+      },
+      {
+        "family": "tray",
+        "case": 4,
+        "allowed": true,
+        "hold_minus_dispatch": {
+          "base": -2.1999549865722656,
+          "sft": 5.23026180267334
+        }
+      },
+      {
+        "family": "tray",
+        "case": 4,
+        "allowed": false,
+        "hold_minus_dispatch": {
+          "base": -2.1215057373046875,
+          "sft": 5.131028175354004
+        }
+      }
+    ]
+  }
+}

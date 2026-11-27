@@ -1,0 +1,4545 @@
+{
+ "size": "4b",
+ "opener_intervention": {
+  "layer": 28,
+  "feature": 484,
+  "controls": [
+   4843,
+   4759,
+   3864
+  ],
+  "token": 236777,
+  "rows": [
+   {
+    "group": "identity",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 2.51110714089009e-06,
+     "484": 2.51110714089009e-06,
+     "4843": 2.51110714089009e-06,
+     "4759": 2.51110714089009e-06,
+     "3864": 2.51110714089009e-06
+    }
+   },
+   {
+    "group": "identity",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 1.9777752352512223e-11,
+     "484": 1.9777752352512223e-11,
+     "4843": 1.9777752352512223e-11,
+     "4759": 1.9777752352512223e-11,
+     "3864": 1.9777752352512223e-11
+    }
+   },
+   {
+    "group": "identity",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 2.2262051970756147e-06,
+     "484": 2.2262051970756147e-06,
+     "4843": 2.2262051970756147e-06,
+     "4759": 2.2262051970756147e-06,
+     "3864": 2.2262051970756147e-06
+    }
+   },
+   {
+    "group": "identity",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 1.2060233887944971e-11,
+     "484": 1.2060233887944971e-11,
+     "4843": 1.2060233887944971e-11,
+     "4759": 1.2060233887944971e-11,
+     "3864": 1.2060233887944971e-11
+    }
+   },
+   {
+    "group": "identity",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 6.805301495660387e-07,
+     "484": 6.805301495660387e-07,
+     "4843": 6.805301495660387e-07,
+     "4759": 6.805301495660387e-07,
+     "3864": 6.805301495660387e-07
+    }
+   },
+   {
+    "group": "identity",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 1.0207236098014327e-11,
+     "484": 1.0207236098014327e-11,
+     "4843": 1.0207236098014327e-11,
+     "4759": 1.0207236098014327e-11,
+     "3864": 1.0207236098014327e-11
+    }
+   },
+   {
+    "group": "identity",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 8.706936114322161e-07,
+     "484": 8.706936114322161e-07,
+     "4843": 8.706936114322161e-07,
+     "4759": 8.706936114322161e-07,
+     "3864": 8.706936114322161e-07
+    }
+   },
+   {
+    "group": "identity",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 1.4970320122431602e-11,
+     "484": 1.4970320122431602e-11,
+     "4843": 1.4970320122431602e-11,
+     "4759": 1.4970320122431602e-11,
+     "3864": 1.4970320122431602e-11
+    }
+   },
+   {
+    "group": "first_person",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 1.0101260919295058e-14,
+     "484": 1.0101260919295058e-14,
+     "4843": 1.0101260919295058e-14,
+     "4759": 1.0101260919295058e-14,
+     "3864": 1.0101260919295058e-14
+    }
+   },
+   {
+    "group": "first_person",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 4.551147666739287e-14,
+     "484": 4.551147666739287e-14,
+     "4843": 4.551147666739287e-14,
+     "4759": 4.551147666739287e-14,
+     "3864": 4.551147666739287e-14
+    }
+   },
+   {
+    "group": "first_person",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 2.0290994006414353e-15,
+     "484": 2.0290994006414353e-15,
+     "4843": 2.0290994006414353e-15,
+     "4759": 2.0290994006414353e-15,
+     "3864": 2.0290994006414353e-15
+    }
+   },
+   {
+    "group": "first_person",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 3.271691525010868e-14,
+     "484": 3.271691525010868e-14,
+     "4843": 3.271691525010868e-14,
+     "4759": 3.271691525010868e-14,
+     "3864": 3.271691525010868e-14
+    }
+   },
+   {
+    "group": "first_person",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 1.6805981765263757e-15,
+     "484": 1.6805981765263757e-15,
+     "4843": 1.6805981765263757e-15,
+     "4759": 1.6805981765263757e-15,
+     "3864": 1.6805981765263757e-15
+    }
+   },
+   {
+    "group": "first_person",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 2.4226165507273273e-14,
+     "484": 2.4226165507273273e-14,
+     "4843": 2.4226165507273273e-14,
+     "4759": 2.4226165507273273e-14,
+     "3864": 2.4226165507273273e-14
+    }
+   },
+   {
+    "group": "first_person",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 1.630277854954129e-15,
+     "484": 1.630277854954129e-15,
+     "4843": 1.630277854954129e-15,
+     "4759": 1.630277854954129e-15,
+     "3864": 1.630277854954129e-15
+    }
+   },
+   {
+    "group": "first_person",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 6.297211812736998e-15,
+     "484": 6.297211812736998e-15,
+     "4843": 6.297211812736998e-15,
+     "4759": 6.297211812736998e-15,
+     "3864": 6.297211812736998e-15
+    }
+   },
+   {
+    "group": "definition",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 4.477698227775112e-19,
+     "484": 4.477698227775112e-19,
+     "4843": 1.6472594918063755e-19,
+     "4759": 4.477698227775112e-19,
+     "3864": 4.477698227775112e-19
+    }
+   },
+   {
+    "group": "definition",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 4.80185624776423e-18,
+     "484": 4.80185624776423e-18,
+     "4843": 4.80185624776423e-18,
+     "4759": 4.80185624776423e-18,
+     "3864": 4.80185624776423e-18
+    }
+   },
+   {
+    "group": "definition",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 8.99143340611671e-18,
+     "484": 8.99143340611671e-18,
+     "4843": 4.24749551766283e-18,
+     "4759": 8.99143340611671e-18,
+     "3864": 8.99143340611671e-18
+    }
+   },
+   {
+    "group": "definition",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 3.305594053135435e-18,
+     "484": 3.305594053135435e-18,
+     "4843": 3.305594053135435e-18,
+     "4759": 3.305594053135435e-18,
+     "3864": 3.305594053135435e-18
+    }
+   },
+   {
+    "group": "definition",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 8.993251549103101e-18,
+     "484": 8.993251549103101e-18,
+     "4843": 7.003951659084524e-18,
+     "4759": 8.993251549103101e-18,
+     "3864": 8.993251549103101e-18
+    }
+   },
+   {
+    "group": "definition",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 1.3735943083169017e-18,
+     "484": 1.3735943083169017e-18,
+     "4843": 1.3735943083169017e-18,
+     "4759": 1.3735943083169017e-18,
+     "3864": 1.3735943083169017e-18
+    }
+   },
+   {
+    "group": "definition",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 6.05990513428302e-20,
+     "484": 6.05990513428302e-20,
+     "4843": 3.2436462773414887e-20,
+     "4759": 6.05990513428302e-20,
+     "3864": 6.05990513428302e-20
+    }
+   },
+   {
+    "group": "definition",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 4.473634703015945e-19,
+     "484": 4.473634703015945e-19,
+     "4843": 4.473634703015945e-19,
+     "4759": 4.473634703015945e-19,
+     "3864": 4.473634703015945e-19
+    }
+   },
+   {
+    "group": "record_hold",
+    "in_character": false,
+    "activation": 449.6158447265625,
+    "p_first_I": {
+     "native": 3.94015984284124e-08,
+     "484": 2.389827713500381e-08,
+     "4843": 3.94015984284124e-08,
+     "4759": 4.992080349097705e-08,
+     "3864": 3.94015984284124e-08
+    }
+   },
+   {
+    "group": "record_hold",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 1.1006318252626546e-11,
+     "484": 1.1006318252626546e-11,
+     "4843": 1.1006318252626546e-11,
+     "4759": 1.1006318252626546e-11,
+     "3864": 1.1006318252626546e-11
+    }
+   },
+   {
+    "group": "record_hold",
+    "in_character": false,
+    "activation": 351.8096923828125,
+    "p_first_I": {
+     "native": 2.447364444435607e-08,
+     "484": 1.1625694185113389e-08,
+     "4843": 2.447364444435607e-08,
+     "4759": 2.431530532476245e-08,
+     "3864": 2.447364444435607e-08
+    }
+   },
+   {
+    "group": "record_hold",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 7.328545756357663e-12,
+     "484": 7.328545756357663e-12,
+     "4843": 7.328545756357663e-12,
+     "4759": 7.328545756357663e-12,
+     "3864": 7.328545756357663e-12
+    }
+   },
+   {
+    "group": "record_hold",
+    "in_character": false,
+    "activation": 486.62677001953125,
+    "p_first_I": {
+     "native": 2.5970629735638795e-07,
+     "484": 1.227710271223259e-07,
+     "4843": 2.5970629735638795e-07,
+     "4759": 2.600617392545246e-07,
+     "3864": 2.5970629735638795e-07
+    }
+   },
+   {
+    "group": "record_hold",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 3.166254584907602e-12,
+     "484": 3.166254584907602e-12,
+     "4843": 3.166254584907602e-12,
+     "4759": 3.166254584907602e-12,
+     "3864": 3.166254584907602e-12
+    }
+   },
+   {
+    "group": "record_hold",
+    "in_character": false,
+    "activation": 532.9312133789062,
+    "p_first_I": {
+     "native": 4.6471944870063453e-07,
+     "484": 2.195179291675231e-07,
+     "4843": 4.6471944870063453e-07,
+     "4759": 4.549462744307675e-07,
+     "3864": 4.6471944870063453e-07
+    }
+   },
+   {
+    "group": "record_hold",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 1.8057125890022507e-12,
+     "484": 1.8057125890022507e-12,
+     "4843": 1.8057125890022507e-12,
+     "4759": 1.8057125890022507e-12,
+     "3864": 1.8057125890022507e-12
+    }
+   },
+   {
+    "group": "record_release",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 3.017641271954065e-14,
+     "484": 3.017641271954065e-14,
+     "4843": 3.017641271954065e-14,
+     "4759": 3.017641271954065e-14,
+     "3864": 7.225205947859054e-14
+    }
+   },
+   {
+    "group": "record_release",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 3.3043053970088776e-12,
+     "484": 3.3043053970088776e-12,
+     "4843": 3.3043053970088776e-12,
+     "4759": 3.3043053970088776e-12,
+     "3864": 3.3043053970088776e-12
+    }
+   },
+   {
+    "group": "record_release",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 1.5410024330805155e-13,
+     "484": 1.5410024330805155e-13,
+     "4843": 1.5410024330805155e-13,
+     "4759": 1.5410024330805155e-13,
+     "3864": 3.2612199616158244e-13
+    }
+   },
+   {
+    "group": "record_release",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 3.807376722925193e-12,
+     "484": 3.807376722925193e-12,
+     "4843": 3.807376722925193e-12,
+     "4759": 3.807376722925193e-12,
+     "3864": 3.807376722925193e-12
+    }
+   },
+   {
+    "group": "record_release",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 2.01002917381201e-14,
+     "484": 2.01002917381201e-14,
+     "4843": 2.01002917381201e-14,
+     "4759": 2.01002917381201e-14,
+     "3864": 4.7712268164135097e-14
+    }
+   },
+   {
+    "group": "record_release",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 4.025519934752753e-12,
+     "484": 4.025519934752753e-12,
+     "4843": 4.025519934752753e-12,
+     "4759": 4.025519934752753e-12,
+     "3864": 4.025519934752753e-12
+    }
+   },
+   {
+    "group": "record_release",
+    "in_character": false,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 1.3346303220774353e-15,
+     "484": 1.3346303220774353e-15,
+     "4843": 1.3346303220774353e-15,
+     "4759": 1.3346303220774353e-15,
+     "3864": 5.2781426622470866e-15
+    }
+   },
+   {
+    "group": "record_release",
+    "in_character": true,
+    "activation": -0.0,
+    "p_first_I": {
+     "native": 4.167847436533506e-13,
+     "484": 4.167847436533506e-13,
+     "4843": 4.167847436533506e-13,
+     "4759": 4.167847436533506e-13,
+     "3864": 4.167847436533506e-13
+    }
+   }
+  ]
+ },
+ "heldout_referent": {
+  "0": [
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.5
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.25
+   }
+  ],
+  "4": [
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.2704395651817322
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.28518712520599365
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.3003058135509491
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.3978332281112671
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.41157659888267517
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.43485695123672485
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.24663323163986206
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": -0.10070565342903137
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": -0.03196194767951965
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": -0.14015835523605347
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": -0.040405869483947754
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.13241326808929443
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": -0.06070411205291748
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": -0.0873982310295105
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": -0.06056874990463257
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": -0.04977148771286011
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": -0.063443124294281
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": -0.039186954498291016
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.5586777925491333
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": -0.35324305295944214
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": -0.3448140621185303
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": -0.4482995867729187
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": -0.359352171421051
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": -0.25185835361480713
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.36662527918815613
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.40793442726135254
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.44925975799560547
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.40186965465545654
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.45002302527427673
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.4577533006668091
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.17301377654075623
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.25941187143325806
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.24654586613178253
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.09624987840652466
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.20853376388549805
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.2509118318557739
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.05352580547332764
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.057889580726623535
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.07513841986656189
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.047737836837768555
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.07548326253890991
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.05617395043373108
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.33533722162246704
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": -0.25006431341171265
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": -0.16480204463005066
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": -0.33675575256347656
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": -0.22618597745895386
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": -0.247482568025589
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.19924291968345642
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.15582284331321716
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.22198909521102905
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.1634899079799652
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.20962801575660706
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.242019385099411
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.03352916240692139
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.017520368099212646
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.03388148546218872
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": -0.045173197984695435
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.005229532718658447
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.006225615739822388
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.3281741738319397
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.37814605236053467
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.31222599744796753
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.25761687755584717
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.24099591374397278
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.29845666885375977
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.2876308560371399
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.324293851852417
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.3818475306034088
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.07908782362937927
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.20026373863220215
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.26194390654563904
+   }
+  ],
+  "8": [
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.4186060130596161
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5113664269447327
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.5421981811523438
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.3965910077095032
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.5054831504821777
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.4889835715293884
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.03424358367919922
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.10788822174072266
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.10597588121891022
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.06531810760498047
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.10071706771850586
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.0708707869052887
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.37645137310028076
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.46940919756889343
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.5110954642295837
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.4332120418548584
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.5260487198829651
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.5215976238250732
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.04535055160522461
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": -0.05144238471984863
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": -0.04172813892364502
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.014255046844482422
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": -0.009095698595046997
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": -0.02676975727081299
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.34176915884017944
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.42625200748443604
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.4018632769584656
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.30984580516815186
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.41689223051071167
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.35388901829719543
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.040884971618652344
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.10134720802307129
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.07436472177505493
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.0026044845581054688
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.08355534076690674
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.04308706521987915
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.28156012296676636
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.32004937529563904
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.3625907301902771
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.3044999837875366
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.3734481632709503
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.4157506823539734
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.21851825714111328
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.2554643154144287
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.22459758818149567
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.22671842575073242
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.2807736396789551
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.2573380470275879
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.3858393430709839
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.44783687591552734
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.4724145531654358
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.3422226011753082
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.36809563636779785
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.4479448199272156
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.1996307373046875
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.18845129013061523
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.14915919303894043
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.15783309936523438
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.04101240634918213
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.0853700041770935
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.4336634874343872
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.49091970920562744
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.48631978034973145
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.4596257209777832
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.5239752531051636
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.5282242894172668
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.3292074203491211
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.3049492835998535
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.27622509002685547
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.292757511138916
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.29305362701416016
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.2761416733264923
+   }
+  ],
+  "12": [
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.6062729358673096
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.6281319856643677
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.5295833945274353
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.6649156808853149
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.6799852848052979
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.5624039173126221
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.05254411697387695
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.13329017162322998
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.10099649429321289
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.08698463439941406
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.17079198360443115
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.12727077305316925
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.5306217670440674
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5253325700759888
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.45264822244644165
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.631469190120697
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.634587287902832
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.5407505035400391
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.1825699806213379
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.2679102420806885
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.23240995407104492
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.19882488250732422
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.28148823976516724
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.24473288655281067
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.6246626377105713
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5227196216583252
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.42869386076927185
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.7003710865974426
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.70567786693573
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.588542103767395
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.06401205062866211
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.039130210876464844
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.035080909729003906
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.065338134765625
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.017996951937675476
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.017410099506378174
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.31714552640914917
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.21483063697814941
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.13758552074432373
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.36613237857818604
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.38168439269065857
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.228570818901062
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.011413931846618652
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.008838176727294922
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": -0.026224970817565918
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.010918378829956055
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.06370872259140015
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": -0.006424695253372192
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.5461620688438416
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5022183656692505
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.3752076327800751
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.5806781053543091
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.4731452465057373
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.40603744983673096
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.12895917892456055
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.155997633934021
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.10576415061950684
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.10166740417480469
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.10962375998497009
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.07182121276855469
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.3369675576686859
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.40459468960762024
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.35366836190223694
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.3901368975639343
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.4348095953464508
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.3308706283569336
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.1589961051940918
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.2345447540283203
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.21448290348052979
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.20741164684295654
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.23458871245384216
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.20969146490097046
+   }
+  ],
+  "17": [
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.41347792744636536
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5029733180999756
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.566942572593689
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.29078397154808044
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.41708219051361084
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.3586796522140503
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.01713418960571289
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.20343074202537537
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.2078711986541748
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.3638606071472168
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.33552032709121704
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.20554059743881226
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.20335030555725098
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.19819068908691406
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.27724963426589966
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.24891510605812073
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.20787256956100464
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.20674455165863037
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.2604384422302246
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": -0.05638352036476135
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": -0.0703657865524292
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": -0.1259160041809082
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.028192788362503052
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": -0.07048723101615906
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.3224877417087555
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5060481429100037
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.5220999717712402
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.48001688718795776
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.3550107479095459
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.46610790491104126
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.06774282455444336
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.07437324523925781
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.08581984043121338
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.11232566833496094
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.050247907638549805
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.06540435552597046
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": -0.025989055633544922
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.19580653309822083
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.31572097539901733
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.14352214336395264
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.46182093024253845
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.49820131063461304
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.2572593688964844
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": -0.001400291919708252
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": -0.08074319362640381
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": -0.0010445117950439453
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.21867908537387848
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.14402297139167786
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.25125640630722046
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.29260945320129395
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.3989506959915161
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.06675907969474792
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.16752201318740845
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.4223026633262634
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.1262063980102539
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.15976524353027344
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.0817299485206604
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": -0.11764812469482422
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": -0.023359179496765137
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.06448817253112793
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.27535271644592285
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.3225477337837219
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.36551257967948914
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.2619968354701996
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.416526734828949
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.3938331604003906
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.060970306396484375
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": -0.02844083309173584
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": -0.00737607479095459
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": -0.0217437744140625
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.09165811538696289
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.10406024754047394
+   }
+  ],
+  "21": [
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.4819556474685669
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.614549994468689
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 1.0049102306365967
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.35699063539505005
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.5467519164085388
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.6235762238502502
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.2560725808143616
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.44761407375335693
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.5959157943725586
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.8719297051429749
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.6138190031051636
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.6912006139755249
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.26366621255874634
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.197906494140625
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.47563236951828003
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.3311247229576111
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.4426143169403076
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.5416204929351807
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.26444506645202637
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": -0.004615902900695801
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.023596882820129395
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.10629093647003174
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.28496307134628296
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.3201497793197632
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.42139220237731934
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.573393702507019
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 1.0300415754318237
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.6183381676673889
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.49041318893432617
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.678608775138855
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.0737149715423584
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.05643808841705322
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.42953193187713623
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.322860449552536
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.18854044377803802
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.34865549206733704
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.2073819637298584
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.3546218276023865
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.7481850385665894
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.12901297211647034
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.42969003319740295
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.5066554546356201
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.03823566436767578
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.22482573986053467
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.25062477588653564
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.0773167610168457
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.32749366760253906
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.4232984185218811
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.32071003317832947
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.3855034112930298
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.7965538501739502
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.018961578607559204
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.08447635173797607
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.3206906318664551
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.036868125200271606
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.19228911399841309
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.15540587902069092
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": -0.0004976391792297363
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.10474538803100586
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": -0.06131947040557861
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.2508823573589325
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.2979136109352112
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.42235711216926575
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.34348833560943604
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.469402551651001
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.45488405227661133
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.09650921821594238
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.12365788221359253
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.24564534425735474
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.26380765438079834
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.17178206145763397
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.3672487735748291
+   }
+  ],
+  "28": [
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.4957694411277771
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.7277680039405823
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.883495569229126
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.6088656187057495
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.7817257642745972
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.7981876730918884
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.4138539433479309
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.6237360835075378
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.5479957461357117
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 1.414870262145996
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 1.4103529453277588
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 1.0968031883239746
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.25610625743865967
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5327613949775696
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.36022496223449707
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.4462571144104004
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.690929651260376
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.621932327747345
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.03280740976333618
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.2945824861526489
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.21347707509994507
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.37657755613327026
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.7366028428077698
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.648569643497467
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.5244942307472229
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.6562309265136719
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.9758097529411316
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.6197071075439453
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.8420199155807495
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.7867578268051147
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.16430604457855225
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.14724886417388916
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.36659562587738037
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.21744310855865479
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.549284815788269
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.5083985924720764
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.43823760747909546
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5122907757759094
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 1.0293493270874023
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.3446742594242096
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.5634467601776123
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.6727648377418518
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.2159983515739441
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.3650856018066406
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.5707758665084839
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.24337565898895264
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.6326768398284912
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.7049387693405151
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.42947107553482056
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5689712762832642
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.8804057836532593
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.3771340250968933
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.25806576013565063
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.8141597509384155
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.13288265466690063
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.4317858815193176
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.3306829035282135
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.25588375329971313
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.2535865306854248
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.17519783973693848
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.4069146513938904
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5736262798309326
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.5045343041419983
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.41198134422302246
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.6857757568359375
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.6958398222923279
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.24812385439872742
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.4445044994354248
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.33965277671813965
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.46417778730392456
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.4877058267593384
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.5825932025909424
+   }
+  ],
+  "34": [
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.6454412937164307
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.685588002204895
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.7392510175704956
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.8136264085769653
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.7465171217918396
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.7664557695388794
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.38311678171157837
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.5211470723152161
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.571117639541626
+   },
+   {
+    "scenario": 0,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 1.0839473009109497
+   },
+   {
+    "scenario": 0,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 1.1079654693603516
+   },
+   {
+    "scenario": 0,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 1.0755186080932617
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.5881513357162476
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5802780389785767
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.672370433807373
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.7844101786613464
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.6577656269073486
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.7714412212371826
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.11684846878051758
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.23142516613006592
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.23488935828208923
+   },
+   {
+    "scenario": 1,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.3430083096027374
+   },
+   {
+    "scenario": 1,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.6429861783981323
+   },
+   {
+    "scenario": 1,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.7037010788917542
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.7655228972434998
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.6772122383117676
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.7801262736320496
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.8454228043556213
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.8327873945236206
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.7649760842323303
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.11397869884967804
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.2760432958602905
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.2601653039455414
+   },
+   {
+    "scenario": 2,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.24157586693763733
+   },
+   {
+    "scenario": 2,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.4695029556751251
+   },
+   {
+    "scenario": 2,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.43473953008651733
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.41788867115974426
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5766425728797913
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.802091121673584
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.4626283645629883
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.679054856300354
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.7225553393363953
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.027161061763763428
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.3057568073272705
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.43792328238487244
+   },
+   {
+    "scenario": 3,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.15067201852798462
+   },
+   {
+    "scenario": 3,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.5844484567642212
+   },
+   {
+    "scenario": 3,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.589439332485199
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.6662832498550415
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5942425727844238
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.7427423000335693
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.7143009901046753
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.6029088497161865
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.6810974478721619
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": -0.031173527240753174
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.3589146137237549
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.32404401898384094
+   },
+   {
+    "scenario": 4,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.14276093244552612
+   },
+   {
+    "scenario": 4,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.3048745393753052
+   },
+   {
+    "scenario": 4,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.28660738468170166
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "real",
+    "score": 0.6074999570846558
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "real",
+    "score": 0.5954241156578064
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "real",
+    "score": 0.48063308000564575
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "real",
+    "score": 0.7823196649551392
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "real",
+    "score": 0.6595953702926636
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "real",
+    "score": 0.6886080503463745
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": false,
+    "label": "act",
+    "score": 0.19078896939754486
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": false,
+    "label": "act",
+    "score": 0.3930019736289978
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": false,
+    "label": "act",
+    "score": 0.31542524695396423
+   },
+   {
+    "scenario": 5,
+    "persona": "plain",
+    "real": true,
+    "label": "act",
+    "score": 0.5821287631988525
+   },
+   {
+    "scenario": 5,
+    "persona": "kind",
+    "real": true,
+    "label": "act",
+    "score": 0.524194061756134
+   },
+   {
+    "scenario": 5,
+    "persona": "gruff",
+    "real": true,
+    "label": "act",
+    "score": 0.5823297500610352
+   }
+  ]
+ }
+}

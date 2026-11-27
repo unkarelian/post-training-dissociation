@@ -1,0 +1,406 @@
+{
+  "description": "Revision-pinned lexical prevalence scan of allenai/olmo-2-hard-coded (does not establish training causation).",
+  "dataset": {
+    "repo": "allenai/olmo-2-hard-coded",
+    "commit": "7e7685797806d1210bb939cd3ef2eb77d6291682",
+    "filename": "hard_coded.jsonl",
+    "url": "https://huggingface.co/datasets/allenai/olmo-2-hard-coded/resolve/7e7685797806d1210bb939cd3ef2eb77d6291682/hard_coded.jsonl",
+    "sha256": "d5cec6da869e368c70706d46c2355e495fdee1ff3a94a679321b52a3fbc762e7"
+  },
+  "mixture_provenance": {
+    "repo": "allenai/tulu-3-sft-olmo-2-mixture",
+    "commit": "9b9737bf4fd1ae4f24028728596d396524ddbb29",
+    "readme_url": "https://huggingface.co/datasets/allenai/tulu-3-sft-olmo-2-mixture/blob/9b9737bf4fd1ae4f24028728596d396524ddbb29/README.md",
+    "documented_hard_coded_rows": 240,
+    "documented_mixture_total_rows": 939344
+  },
+  "matching_rules": {
+    "unicode_normalization": "NFKC",
+    "regex_pattern_template": "\\b<escaped_term>\\b",
+    "regex_flags": "re.IGNORECASE",
+    "term_groups": {
+      "ai_terms": [
+        "ai",
+        "artificial intelligence",
+        "language model",
+        "llm",
+        "chatbot",
+        "virtual assistant"
+      ],
+      "brand_terms": [
+        "olmo",
+        "ai2",
+        "allenai",
+        "allen institute"
+      ],
+      "biological_terms": [
+        "alive",
+        "born",
+        "body",
+        "feelings",
+        "conscious",
+        "consciousness",
+        "sentient",
+        "human"
+      ]
+    }
+  },
+  "row_counts": {
+    "n_physical_rows": 240,
+    "n_rows_with_user_msg": 230,
+    "n_rows_with_assistant_msg": 240,
+    "n_non_null_ids": 240,
+    "n_unique_ids": 24,
+    "has_repeated_ids": true
+  },
+  "lexical_prevalence_by_role": {
+    "user": {
+      "denominator_rows": 230,
+      "groups": {
+        "ai_terms": {
+          "union_rows_matched": 0,
+          "union_rate": 0.0,
+          "union_total_occurrences": 0,
+          "terms": {
+            "ai": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "artificial intelligence": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "language model": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "llm": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "chatbot": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "virtual assistant": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            }
+          }
+        },
+        "brand_terms": {
+          "union_rows_matched": 40,
+          "union_rate": 0.173913,
+          "union_total_occurrences": 40,
+          "terms": {
+            "olmo": {
+              "rows_matched": 20,
+              "rate": 0.086957,
+              "total_occurrences": 20
+            },
+            "ai2": {
+              "rows_matched": 20,
+              "rate": 0.086957,
+              "total_occurrences": 20
+            },
+            "allenai": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "allen institute": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            }
+          }
+        },
+        "biological_terms": {
+          "union_rows_matched": 0,
+          "union_rate": 0.0,
+          "union_total_occurrences": 0,
+          "terms": {
+            "alive": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "born": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "body": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "feelings": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "conscious": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "consciousness": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "sentient": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "human": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            }
+          }
+        }
+      }
+    },
+    "assistant": {
+      "denominator_rows": 240,
+      "groups": {
+        "ai_terms": {
+          "union_rows_matched": 120,
+          "union_rate": 0.5,
+          "union_total_occurrences": 220,
+          "terms": {
+            "ai": {
+              "rows_matched": 50,
+              "rate": 0.208333,
+              "total_occurrences": 60
+            },
+            "artificial intelligence": {
+              "rows_matched": 40,
+              "rate": 0.166667,
+              "total_occurrences": 40
+            },
+            "language model": {
+              "rows_matched": 80,
+              "rate": 0.333333,
+              "total_occurrences": 110
+            },
+            "llm": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "chatbot": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "virtual assistant": {
+              "rows_matched": 10,
+              "rate": 0.041667,
+              "total_occurrences": 10
+            }
+          }
+        },
+        "brand_terms": {
+          "union_rows_matched": 130,
+          "union_rate": 0.541667,
+          "union_total_occurrences": 480,
+          "terms": {
+            "olmo": {
+              "rows_matched": 90,
+              "rate": 0.375,
+              "total_occurrences": 190
+            },
+            "ai2": {
+              "rows_matched": 90,
+              "rate": 0.375,
+              "total_occurrences": 130
+            },
+            "allenai": {
+              "rows_matched": 90,
+              "rate": 0.375,
+              "total_occurrences": 120
+            },
+            "allen institute": {
+              "rows_matched": 40,
+              "rate": 0.166667,
+              "total_occurrences": 40
+            }
+          }
+        },
+        "biological_terms": {
+          "union_rows_matched": 10,
+          "union_rate": 0.041667,
+          "union_total_occurrences": 10,
+          "terms": {
+            "alive": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "born": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "body": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "feelings": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "conscious": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "consciousness": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "sentient": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "human": {
+              "rows_matched": 10,
+              "rate": 0.041667,
+              "total_occurrences": 10
+            }
+          }
+        }
+      }
+    },
+    "any": {
+      "denominator_rows": 240,
+      "groups": {
+        "ai_terms": {
+          "union_rows_matched": 120,
+          "union_rate": 0.5,
+          "union_total_occurrences": 220,
+          "terms": {
+            "ai": {
+              "rows_matched": 50,
+              "rate": 0.208333,
+              "total_occurrences": 60
+            },
+            "artificial intelligence": {
+              "rows_matched": 40,
+              "rate": 0.166667,
+              "total_occurrences": 40
+            },
+            "language model": {
+              "rows_matched": 80,
+              "rate": 0.333333,
+              "total_occurrences": 110
+            },
+            "llm": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "chatbot": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "virtual assistant": {
+              "rows_matched": 10,
+              "rate": 0.041667,
+              "total_occurrences": 10
+            }
+          }
+        },
+        "brand_terms": {
+          "union_rows_matched": 140,
+          "union_rate": 0.583333,
+          "union_total_occurrences": 520,
+          "terms": {
+            "olmo": {
+              "rows_matched": 90,
+              "rate": 0.375,
+              "total_occurrences": 210
+            },
+            "ai2": {
+              "rows_matched": 100,
+              "rate": 0.416667,
+              "total_occurrences": 150
+            },
+            "allenai": {
+              "rows_matched": 90,
+              "rate": 0.375,
+              "total_occurrences": 120
+            },
+            "allen institute": {
+              "rows_matched": 40,
+              "rate": 0.166667,
+              "total_occurrences": 40
+            }
+          }
+        },
+        "biological_terms": {
+          "union_rows_matched": 10,
+          "union_rate": 0.041667,
+          "union_total_occurrences": 10,
+          "terms": {
+            "alive": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "born": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "body": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "feelings": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "conscious": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "consciousness": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "sentient": {
+              "rows_matched": 0,
+              "rate": 0.0,
+              "total_occurrences": 0
+            },
+            "human": {
+              "rows_matched": 10,
+              "rate": 0.041667,
+              "total_occurrences": 10
+            }
+          }
+        }
+      }
+    }
+  }
+}
