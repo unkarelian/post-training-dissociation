@@ -151,6 +151,44 @@ Pinned `unsloth/gemma-3-4b-it` (`bf46152`) vs. `unsloth/gemma-3-12b-it` (`9478e6
 
 ---
 
+## 1.6 Follow-Up Mechanistic Deep-Dive (`P3` & `P4` — A100-SXM4-40GB, Codex Sanity-Checked)
+
+### `P3` — Cross-Family, RL-Stage, Row-vs-Rank, & Reason-First `lm_head` Generalization (`results/p3_analysis.json`)
+Tested across **5 untied-head models** (`OLMo-2-7B-SFT` with `Base`/`SFT`/`DPO`/`Instruct` heads, `OLMo-2-7B-Instruct`, `Llama-3.1-8B-Instruct`, `Mistral-7B-Instruct-v0.3`, `Qwen2.5-7B-Instruct`; exact `0.0` native/physical parity on all 5; `20,544` total replies / `5,952` unique replies Jev-scored with `0` failures):
+
+| Model (`\|\Delta W\|_F`, action rows) | Cell | `base/base` | `post/base` (tok 0) | `base/post` (tok 1+) | `post/post` | `action_rows/base` (`26` rows) | `except_action_rows/base` | `reason_first` (`base/base`) |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| **`OLMo-2-7B-SFT`** (`26.37`, `0.026%` E) | `fwd / lf / verdict` | `0.688` | **`0.958` (`+27.1 pp`)** | `0.688` | `0.958` | **`0.958` (`+27.1 pp`)** | `0.688` (`+0.0`) | `0.979` (`rf_lf`) |
+| | `fwd / action_clear` | `0.458` | **`0.792` (`+33.3 pp`)** | `0.458` | `0.792` | **`0.792` (`+33.3 pp`)** | `0.458` (`+0.0`) | **`0.896`** |
+| **`OLMo-2-7B-Inst`** (`26.38`, `0.026%` E) | `fwd / action_clear` | `0.500` | `0.604` (`+10.4 pp`) | `0.500` | `0.604` | **`0.625` (`+12.5 pp`, $p=0.016$)** | `0.500` (`+0.0`) | **`0.875`** |
+| | `rev / action_clear` | `0.438` | **`0.562` (`+12.5 pp`, $p=0.018$)** | `0.438` | `0.562` | — | — | — |
+| **`Llama-3.1-8B-Inst`** (`21.32`, `0.013%` E) | `fwd / action_clear` | `0.646` | **`0.917` (`+27.1 pp`, $p<0.001$)** | `0.667` | `0.958` | **`0.917` (`+27.1 pp`)** | `0.646` (`+0.0`) | **`0.938`** (`parsed=1.000`) |
+| | `rev / action_clear` | `0.625` | **`0.979` (`+35.4 pp`, $p<0.001$)** | `0.604` | `0.979` | — | — | — |
+| **`Mistral-7B-v0.3`** (`0.84`, `0.031%` E) | `fwd / action_clear` | `0.917` | `0.917` (`+0.0`) | `0.917` | `0.917` | `0.917` | `0.917` | `1.000` |
+| **`Qwen2.5-7B-Inst`** (`10.81`, `0.008%` E) | `fwd / action_clear` | `0.938` | `0.958` (`+2.1 pp`) | `0.938` | `0.958` | `0.958` | `0.938` | `1.000` |
+
+- **Two distinct `lm_head` mechanisms separated:**
+  1. **Row-local action-word prior calibration at token 0:** On the tested forward cells for `OLMo-2-SFT`, `OLMo-2-Instruct`, and `Llama-3.1-8B-Instruct` (`action_clear`), swapping **only 26 task action-word rows** (`0.013%–0.026%` of $\Delta W$ energy) recovers the full `post/base` gain (`+27.1` to `+33.3 pp` on OLMo-SFT; `+12.5 pp` vs. `+10.4 pp` on OLMo-Instruct; `+27.1 pp` on Llama), while `except_action_rows/base` (`>99.97%` of energy) produces `+0.0 pp`. Full `DPO` and `Instruct` heads on the SFT backbone retain the same calibration (`0.938` on `lf/verdict`, `0.792` on `action_clear`). *(Row masks were tested on forward cells for each model's `post` head, not reversed cells.)*
+  2. **EOS / stop-token termination calibration at tokens 1+:** On Llama `forward/label_free/none`, all `96/96` replies already pick the correct `Send`/`Keep` at token 0 under both heads, yet `base/base` and `post/base` hit `max_new_tokens` on `96/96` replies (`0/96` EOS) and ramble into contradictions (`0.521` Jev accuracy), whereas `base/post` registers EOS on `96/96` (`1.000`). Similarly, on Qwen `reason_first_ac`, all `96/96` `base/base` replies contain the right decision (`1.000` Jev) but append unstopped trailing junk (e.g., `APPROVEprintStats`), dropping strict regex parsing from `1.000 → 0.438`.
+- **Reasoning-first escape hatch & caveats:** Moving the verdict after a 1-sentence `Fact:` clause raises `base/base` to `0.896` (`OLMo-SFT`), `0.875` (`OLMo-Inst`), and `0.938` (`Llama`) with `post/base − base/base = +0.000` (all `96/96` prompts pick the same initial token at `Fact:`). Caveats: the `reason_first` prompt also fixed `APPROVE` before `BLOCK` and raised `max_new_tokens` from `48 → 72`, and the head's isolated effect specifically at the later `Decision:` token was not separately measured. On Mistral (`\|\Delta W\|_F = 0.84`, base-head Instruct-backbone TF margin `+26.29` nats), pair accuracy is unchanged (`8/96` reversed `label_free` prompts still change token 0); Qwen `forward/action_clear` gains 1 pair (`+2.08 pp`).
+
+### `P4` — Resolving Gemma-3-4B's Full-Donor vs. 1D Probe Paradox (`results/p4_analysis.json`)
+Re-examining Gemma-3-4B-IT (`unsloth/gemma-3-4b-it @ bf46152`) on the 6 discovery + 12 evaluation scenarios from `P2a` (exact `0.0` pre-hook & generation-prefill parity across all 7 sweep layers `L4, L8, L12, L16, L20, L24, L28`):
+- **L20 → L24 shift from label-invariant truth/action dominance to A/B letter-readout dominance (2×2 full-vector donor matrix on discordant `A/B dispatch`, `sham = 39.6%`):**
+
+| Layer | `same_truth, same_letter` | `same_truth, FLIP_letter` | `wrong_truth, FLIP_letter` | `wrong_truth, SAME_letter` | **Truth Main Effect (FC)** | **Letter Main Effect (FC)** |
+|---|---:|---:|---:|---:|---:|---:|
+| **L16** | `43.8%` | `45.8%` | `37.5%` | `41.7%` | `+5.2 pp` `[+1.0, +10.4]` | `+1.0 pp` `[-2.1, +4.2]` |
+| **L20** | **`64.6%`** | **`70.8%`** | `31.2%` | **`22.9%`** | **`+40.6 pp` `[+28.1, +54.2]`** | `-7.3 pp` `[-15.6, +1.0]` |
+| **L24** | `64.6%` | **`37.5%`** | `35.4%` | **`62.5%`** | `+2.1 pp` `[+0.0, +6.2]` | **`+27.1 pp` `[+12.5, +39.6]`** |
+| **L28** | `64.6%` | `35.4%` | `35.4%` | `64.6%` | `+0.0 pp` *(margin `+0.23` nats)* | **`+29.2 pp` `[+16.7, +41.7]`** |
+
+  *Caveats:* Because discordant prompts use a fixed dispatch rule (`actual_problem == yes`) and swapping truth flips both reports and the donor's trailing report, the L20 main effect reflects label-invariant truth/yes-no dominance (which shifts to A/B letter dominance by L24–L28; 4-layer spacing does not pinpoint the exact transition layer, and L28 retains a `+0.23`-nat truth margin contrast). Minor BF16 batching sensitivity shifts 1 pallet-jack row between discordant-only batching (`31/48 = 64.6%`) and mixed batching (`32/48 = 66.7%`).
+- **Discovery-fit rank-4 delta subspace recovers `full_delta` at L20 & L24 while 1D ridge `u_truth` captures only `0.29%` of delta energy:** Fitting strictly on the 6 discovery scenarios (evaluation scenarios held out from fitting, though reused from `P2a`, where L20 A/B dispatch LOSO was `12/12 PF` and `11/12 AF`), `proj_u_truth` captures only `0.289%` of held-out `h_PF − h_AF` delta energy at L20 (`disc = 41.7%`), whereas top-4 discovery delta-PCs (`proj_pc_4`, `62.7%` energy) reach **`66.7%` (`32/48`, `[60.4%, 72.9%]`)** — matching `full_delta` (`32/48`, disagreeing on 4 individual rows) and outperforming per-case norm-matched random vectors by **`+28.5 pp` (`[+18.8, +37.5]`, `0/2000` opposite-tail bootstrap draws)** *(note: the random control draws per-case vectors rather than a shared rank-4 basis, and Gram-Schmidt ordering can leave a small residual PC component)*.
+- **Open-prose suffix patching restores `50.0% → 91.7%`:** On discordant open attribution (`af_baseline = 50.0%`, `pf_baseline = 91.7%`), patching only the final prompt token fails even across 6 layers (`single_tok_L16_26 = 50.0%`), whereas patching the **38-token aligned question suffix** across `L16, L18, L20, L22, L24` (`question_suffix_L16_24`) restores **`91.7%` (`[79.2%, 100%]`)** — establishing sufficiency of that multi-layer prefill suffix intervention. *(Caveat: `question_suffix_L16_24_wrong_donor` scored `8.3%` but matched `45–48` trailing tokens including report text rather than `38`, and prefill residual replacement affects both first-token logits and cached K/V, so span-matched wrong-donor and cache-only isolation remain for future work.)*
+
+---
+
 ## 2. Honest Boundaries & What Failed Adversarial Controls
 To keep claims strictly grounded:
 1. **Raw logit lens (`H3`) was confounded by a middle-layer `"yes"` prior:** In v1, `alive`/`born` dropped `0.95 → 0.00` in late layers, *but so did `ctrl_toaster`*. Polarity-balanced pairs (`exp4` Part B) sit flat at `0.50` through early/middle layers on Gemma, Llama, and Qwen.
@@ -192,6 +230,10 @@ python3 scripts/run_colab_plan.py                    # Runs P1 -> P2a -> P2b on 
 python3 src/p1_score_jev.py --workers 64             # Off-GPU Jev scoring + TF stats for P1
 python3 src/p2a_score_jev.py --workers 64            # Off-GPU Jev scoring + causal stats for P2a
 python3 src/p2b_analyze.py                           # 18-scenario paired 4B vs 12B scale analysis
+python3 tests/test_p3_p4_scripts.py                  # CPU unit tests for P3 & P4
+python3 scripts/run_colab_p3_p4.py                   # Runs P4 -> P3 on Colab GPU (auto-releases VM)
+python3 src/p4_score_jev.py --workers 64             # Off-GPU Jev scoring + 2x2/subspace stats for P4
+python3 src/p3_score_jev.py --workers 64             # Off-GPU Jev scoring + 5-model stats for P3
 python3 src/build_manifest.py                        # Regenerate SHA-256 results/manifest.json
 ```
 
@@ -210,8 +252,10 @@ post-training-dissociation/
 │   ├── p1_olmo_realizations.py         # P1 OLMo-2 7B teacher-forcing + 17-arm timing/sparsity runner
 │   ├── p2a_gemma_restoration.py        # P2a Gemma-3-4B controlled donor restoration & native-use runner
 │   ├── p2b_gemma_scale.py              # P2b Gemma-3-4B vs. 12B paired 18-scenario scale runner
+│   ├── p3_head_generalization.py       # P3 5-model cross-family, row-vs-rank, & reason-first runner
+│   ├── p4_gemma_paradox.py             # P4 Gemma 2x2 truthxletter sweep, rank-k PCs, & suffix patching
 │   ├── gemma_routing_binding.py        # Pre-P2a Gemma workshop routing probe script
-│   └── olmo_head_timing.py             # Pre-P1 OLMo token-0 timing script
+│   └── olmo_head_timing.ipynb          # Pre-P1 OLMo token-0 timing notebook
 ├── src/
 │   ├── common.py                       # 5-family model loader & 6-frame formatter
 │   ├── jev_judge.py                    # Schema-validated, disk-cached NanoGPT Jev client

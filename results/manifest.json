@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-11-27T14:15:37Z",
-  "git_head": "e47834f5cec595402ae5c04bb77eb1e8e4e35e34",
+  "generated_at_utc": "2026-11-27T15:20:18Z",
+  "git_head": "fdadde70176ee2d03645a0d4051ab8ad70066e68",
   "git_dirty": true,
   "pinned_revisions": {
     "allenai/OLMo-2-1124-7B": "7df9a82518afdecae4e8c026b27adccc8c1f0032",
@@ -41,16 +41,22 @@
     "src/p1_score_jev.py": "6d94a392a919406e5410e7d9f738a0f4787e9b20988a5666f7b14d00f97ececb",
     "src/p2a_score_jev.py": "a702d1f752e37d832b4fbbdaf1acbaa0b7cf3bd76be9d0658c9fa1827f723a12",
     "src/p2b_analyze.py": "a5626f0772148ae0367de61501d6bce2a99bb45a06980a723f7832e1ef4e3f2a",
+    "src/p3_score_jev.py": "fd1d9f6451f792c05ed0583bb62bc63c319bac7595127f6a6f5b4bbcaab013df",
+    "src/p4_score_jev.py": "0ee0fc0f549eb16c67cdb9419abedd446596130d6b39e2504ab79abf192275ea",
     "src/test_exp10.py": "08b1e3558c3c25eaa6dc59e3df2d64363fd32bcfa2f0c3dde3e2139f3ec55dd1",
     "experiments/gemma_routing_binding.py": "a2b16d96365ffd7849fb059b85e72fa9116f6cb3fc11cf4fa17967b86478b95e",
     "experiments/p1_cases_manifest.py": "192946093d93486b4d9184f91f87799dc18d845844458dc755df069a2c397e97",
     "experiments/p1_olmo_realizations.py": "c67857a892624d40752d342780afdc86a62131056bed33b0f7f711dbef11d686",
     "experiments/p2a_gemma_restoration.py": "2947403c582bdbde88f1e949f4a3291466a3c5772183afed6a001290f80721c8",
     "experiments/p2b_gemma_scale.py": "1a0b0112e4812b9d09e387535ca13cf4658fe0eb9f1d6138aeea7c49274d8d7d",
+    "experiments/p3_head_generalization.py": "ed5a3fe2e4f205bdc86890b6a9239430fd5953de469f611ff60956df4c05e078",
+    "experiments/p4_gemma_paradox.py": "2733356a976ccde43989e0e9804182bc9eeaa6b20452a41f166bbf47711e0648",
     "experiments/p1_cases_manifest.json": "c2df461f4e278b1dedd24e34f09058d75bf600d8cd0b94c2865628b68f4af13e",
     "scripts/retry_colab_g4.py": "632ef3fbfb90c1d80290daa89e0544eb1ae91fbf880c695524a040e9d8510ea0",
+    "scripts/run_colab_p3_p4.py": "dc63a978e28085e2bdd003223da18b95053753808df452bdac612ffc330c3e3a",
     "scripts/run_colab_plan.py": "25943d04030e8eeab0d9101c0a36a90232a1866127edf6425c5db323de52f5cd",
     "scripts/runpod.py": "d600d39ea4c318f7277bf12b56aa8d45403aab0b839f567cd10f83d7e1da0bab",
+    "tests/test_p3_p4_scripts.py": "1a65ac49f187775ba79de2ae6b362a31c56ee0a8827888b1ec83478d1ab5b344",
     "tests/test_plan_scripts.py": "4269203bf2c1ac0c490a0bca8d67fccbeef707cec96aa3dc0630337b63d0ed01"
   },
   "results": {
@@ -273,6 +279,22 @@
     "results/p2b_gemma_scale.json": {
       "sha256": "7c14715b77e56b568c5a9709d9a7f312ac2788e5bd7e79891e281023a8de4d0b",
       "bytes": 603834
+    },
+    "results/p3_analysis.json": {
+      "sha256": "995cc4b934f8f281bfe9a6bf72a2d1f1be0962d80740b292dc317184a39523b0",
+      "bytes": 330893
+    },
+    "results/p3_head_generalization.json": {
+      "sha256": "d05e749223e5eeab335b607cced9f1b47482018f02f4ab16311a09dbb3d127ba",
+      "bytes": 10089707
+    },
+    "results/p4_analysis.json": {
+      "sha256": "c99f62f5957b12e0701ca38daa6cec0f341466cb4f32375f2042630408be4712",
+      "bytes": 82789
+    },
+    "results/p4_gemma_paradox.json": {
+      "sha256": "07b0bb4960e94ec44bf7006067e9178c9520447d9006229c2b8bf7a01c8f7cc5",
+      "bytes": 2868109
     }
   }
 }

@@ -9,4 +9,6 @@ results/validation/
 results/p0_graft_jev_audit.json
 results/p1_olmo_realizations.json
 results/p2a_gemma_restoration.json
+results/p3_head_generalization.json
+results/p4_gemma_paradox.json
 experiments/p1_cases_manifest.json
